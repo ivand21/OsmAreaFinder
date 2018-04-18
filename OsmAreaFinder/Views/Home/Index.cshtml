@@ -1,0 +1,21 @@
+﻿@model OsmAreaFinder.Models.Filter
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/home.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/Custom/addFilter.js"></script>
+
+<div id="home-container">
+    <div id="map" class="map">
+        @{ Html.RenderPartial("_Map");  }
+    </div>
+    <div id="form-filters-container">
+        @{ Html.RenderPartial("_FilterForm", Model);  }
+    </div>
+    <div id="display-filters-container">
+        @{ Html.RenderPartial("_FilterTable");  }
+    </div>
+</div>

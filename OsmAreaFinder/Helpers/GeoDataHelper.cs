@@ -43,6 +43,7 @@ namespace OsmAreaFinder.Helpers
                     }
                     if (!isPointValid) return false;
                 }
+
             }
             return true;
         }

@@ -1,0 +1,707 @@
+@id;@lat;@lon;name
+26488644;54.0726131;18.4474289;Kościół pw. Św. Michała Archanioła
+311589217;53.9273894;18.6943015;katedra pod wezwaniem Wniebowzięcia Najświętszej Marii Panny
+442703776;54.1656439;17.4839956;Cerkiew Ukraińsko-Bizantyjska św. Jerzego z 1685 r.
+469985113;54.7381360;17.8851869;Parafia Św. Józefa Oblubienicy Najświętszej Maryi Panny
+471191748;54.0705871;18.9790466;Kościół pw. Św. Wincentego A'Paulo
+966161353;54.7874745;18.0818068;Kościół Zwiastowania Najświętszej Marii Panny
+1144218887;54.7854155;18.3228961;Kościół pw. Św. Marii Magdaleny
+1363056669;54.6783594;17.9258993;Kościół filialny p.w św. Józefa
+1395967061;54.7709576;17.8949648;NMP Gwiazdy Morza
+1395967101;54.7915883;17.8597452;Św. Maksymiliana Kolbego
+1428578319;53.9171532;17.8503310;Kalwaria w Wielu
+1453559223;54.5468092;18.2249502;Kaplica filialna pw. św. Krzysztofa w Sopieszynie
+1574157351;54.4316669;19.6012088;Kościół Matki Bożej Gwiazdy Morza
+1710900009;54.3242130;17.7979481;Niepokalanego Poczęcia Najświętszej Maryi Panny
+1737802786;54.2584898;18.7472057;Kościół pw. filialny Wniebowzięcia NMP
+1756223616;54.3951357;18.0307296;Kościół świętego Jana Chrzciciela
+1893851562;54.2540436;18.1135230;Kościół pw. Matki Boskiej Fatimskiej
+1896998161;53.6219398;17.4476369;Kościół filialny pw. Matki Bożej Wspomożenia Wiernych
+2104827913;54.5606956;17.7322981;Kościół pw. Niepokalanego Poczęcia Najświętszej
+2207181889;54.1437900;18.1228400;Kościół Św. Michała Archanioła
+2262587817;54.3170954;18.2863593;Kościół parafialny pw. Chrystusa Króla Wszechświata
+2262594759;54.3879871;18.0898403;Sanktuarium Matki Boskiej Sianowskiej Królowej Kaszub
+2264380617;54.1359755;18.7223296;Macierzyństwa Najświętszej Maryi Panny
+2290174798;53.8400020;19.2903005;Kościół pw. filialny Matki Bożej Gromnicznej
+2291196698;54.2853282;17.9992058;Kościół pw. św. Józefa
+2338217653;54.7150672;18.3915857;Kościół pw. św. Faustyny Kowalskiej
+2366972094;54.7877219;18.0011685;Kościół Najświętszego Serca Pana Jezusa i św. Rozalii z Palermo
+2422554072;53.9602941;18.5218707;pw. Miłosierdzia Bożego
+2454098721;53.8069452;18.3197004;Kościół Matki Bożej Królowej Polski
+2461178267;54.5964400;18.0991800;Kościół Rzymskokatolicki pw. Św Jadwigi
+2471407563;54.1614100;17.4895500;Sala Królestwa Świadków Jehowy
+2487227128;54.0929027;17.5737551;Kościół Trójcy Świętej
+2497047852;54.0024299;16.9816657;Kościół pw. Najświętszej Maryi Panny Wspomożycielki Wiernych
+2499179483;54.2943390;18.8098942;Kościół pw. filialny Św. Teresy Benedykty od Krzyża
+2503482048;53.9148944;19.0378899;Kościół pw. Św. Anny
+2592087539;53.8501933;19.1667441;Kościół ewangelicko-augsburski
+2599690751;53.6026377;17.5561453;Kościół par. pw. Świętego Krzyża
+2599690843;53.8613764;17.5004253;Kościół św. Barbary
+2625257194;53.6660879;17.3631144;Sala Królestwa Świadków Jehowy
+2629681464;53.6982727;17.5645413;Sala Królestwa Świadków Jehowy
+2634135343;54.3343969;18.1966186;Kapliczka Św. Brunona
+2694604816;54.1502446;17.6391254;Świętych Apostołów Piotra i Pawła
+2960338524;54.2049313;18.1074373;Kościółek Św. Rafała Kalinowskiego
+2985483690;54.6208055;17.3717852;Kościół pw. św. Apostołów Piotra i Pawła
+3001849839;53.8768073;19.2349407;Kościół pw. św. Anny
+3011643710;54.0729157;18.9226459;Kościół pw. Św. Floriana
+3025772850;53.7982875;18.5281615;Kościół Wszystkich Świętych
+3033436913;54.3536498;16.9680622;Kościół filialny pw. Józefa Oblubieńca NMP
+3033499988;54.3887911;16.9746178;Kościół filialny pw. Wziebowzięcia NMP
+3033541227;54.3886443;16.9047704;Kościół parafialny pw. św. Stanisława Kostki 
+3033551098;54.4392999;16.9966897;Kościół parafialny pw. NSPJ
+3068654143;53.9170001;17.8493247;Kaplica Obnażenie Pana Jezusa z szat
+3192316289;54.7115084;17.7839182;Kaplica cmentarna rodu von Tesmar
+3192320441;54.7243392;17.8675393;Kaplica cmentarna rodu von Milczewskich
+3192324666;54.7246537;17.8316315;Kaplica cmentarna rodu von Wittke
+3262512444;54.4761296;18.5535786;Kaplica pw. Gwiazdy Morza
+3523539308;54.2253475;16.8578484;
+3615511107;53.6808655;17.3705532;Cmentarz Komunalny
+3625917706;54.6119798;18.1427178;Kapliczka
+3673032600;53.6779063;17.3637439;Judy Tadeusza
+3698331475;54.6659624;17.0556750;
+3704750819;54.6767170;18.1739792;Kaplica Leśna
+3713266640;54.5988929;18.2242898;Kalwaria Wejherowska
+3721888773;53.8938118;17.8845619;Kapliczka przydrożna
+3732311325;54.3755470;18.5794491;Kaplica cmentarna
+3751408477;54.4640072;17.6903018;
+3754106178;54.0915704;17.0674960;
+3757056789;54.1011647;16.9884257;
+3757914403;54.1234230;17.5295277;
+3758111550;54.2001936;17.3687725;
+3760338878;54.2933983;17.1580344;
+3808094912;53.4943483;17.3283542;
+3812423805;53.6147506;17.1906379;
+3830471670;54.0326128;17.3731533;
+3840090566;53.5721356;17.0719268;Kościół filialny św. Piotra i Pawła Apostołów
+3841921910;53.5833108;17.2800181;
+3841922841;53.6807085;17.4302391;
+3870114757;53.7526357;17.3956672;
+3900470889;54.5639889;18.3878358;Parafia pw. św. Józefa i św. Judy Tadeusza
+3906410082;54.0608534;17.1603739;Kościół pw. św. Stanisława Kostki
+3917592852;54.5724712;18.1030530;kosciol
+3966014564;54.4363534;17.8852491;
+4073902089;53.8591136;19.4940062;Kościół Matki Boskiej Królowej Świata z 1821 roku.
+4101994721;54.3719350;18.5085299;
+4101994722;54.3794511;18.4858290;
+4123168407;54.0730061;18.4481941;Parafia rzymskokatolicka Św. Michała Archanioła
+4243063700;53.7359729;18.9451869;Sala Królestwa Świadków Jehowy
+4338856183;54.8245181;18.2445000;Kaplica
+4384248353;53.7712921;17.8543736;
+4392345281;53.8140961;17.8631386;
+4393808692;53.6541814;17.6086190;
+4393808693;53.6662846;17.5957394;
+4393809465;53.6493424;17.6046517;
+4393814775;53.6478662;17.6010023;
+4393825714;53.6995962;17.6448965;
+4394944743;53.8676997;17.7417175;
+4394944744;53.8750136;17.7541963;
+4466299155;54.3784630;18.2881448;Parafia Rzymskokatolicka pw. Św. Andrzeja Apostoła
+4483658017;53.7119891;17.5680192;Dolina Śmierci
+4594698154;54.1884900;16.8758649;
+4594827974;54.0837782;17.4395599;
+4598759793;53.8464220;17.3037636;
+4622554192;53.6326707;17.6681054;
+4730381517;54.6129132;18.1944711;Sala Królestwa Świadków Jehowy
+4811921856;54.3121176;18.5603127;Kościół filialny Świętej Faustyny
+4845256958;54.4713032;17.1021250;Kaplica Wojskowa pw. bł. ks. Michała Sopoćki
+5031722633;54.3843283;19.4523118;Kaplica pw. św. Józefa z Szantungu
+5138023572;54.1989902;18.4205711;Kościół pw. Bartłomieja Apostoła
+5218174508;54.5184740;18.5383423;Buddyjska Grupa Medytacyjna Diamentowej Drogi Gdynia
+5241694485;54.3675706;18.5450730;Sanktuarium Matki Bożej Brzemiennej w Gdańsku Matemblewie
+5519993627;54.0061407;19.0079486;Sala Królestwa Świadków Jehowy
+5564263244;54.0618827;17.1602899;
+26629429;;;Kościół pw. Świętego Jana Kantego
+39374646;;;Kościół świętych Apostołów Piotra i Pawła
+46426385;;;Bazylika Mariacka
+60064084;;;Kaplica cmentarna
+66318647;;;Kościół pw. Matki Bożej Królowej Polski
+66318648;;;
+66337679;;;Kościół pw. Ścięcia Świętego Jana Chrzciciela
+66505853;;;Kościół Chrześcijan Baptystów w Chojnicach
+66993103;;;Kościół pw. Zwiastowania Najświętszej Maryi Panny
+69605369;;;Kościół pod wezwaniem Chrystusa Miłosiernego
+70031664;;;Kolegiata Najświętszego Serca Jezusowego
+70037902;;;Kaplica św. Anny
+71585448;;;Kościół pw. Chrystusa Króla
+73203132;;;Kościół Nawiedzenia NMP
+75031876;;;Kościół świętych Apostołów Piotra i Pawła - "Fara"
+75031881;;;Kościół Matki Bożej Nieustającej Pomocy
+82671268;;;Kościół pw. Chrystusa Zbawiciela
+87201400;;;Kościół filialny Matki Bożej Królowej Korony Polskiej
+87244496;;;pw. Bł. Michała Kozala
+87776005;;;Kościół pw. Niepokalanego Serca Maryi
+88382138;;;Kościół św. Stanisława Biskupa i Męczennika
+88382140;;;Kościół pw. NMP Matki Kościoła i św. Katarzyny Szwedzkiej
+88382145;;;parafia pw. Św. Krzyża
+88457136;;;Kościół pw. św. Józefa
+88481075;;;Mały Kościół
+88492728;;;Kościół Adwentystów Dnia Siódmego
+88604927;;;Kościół Garnizonowy Wojska Polskiego pw. św. Apostołów Piotra i Pawła
+88689909;;;Kościół pw. Świętego Michała Archanioła
+89445283;;;Kościół pw. Świetego Józefa Oblubieńca Najświętszej Maryi Panny
+89454967;;;Kościół pw. Świętego Maksymiliana Kolbego
+89710575;;;Kościół pw. św. Kazimierza Królewicza
+90722474;;;Kościół Rzymskokatolicki pw. Opatrzności Bożej
+90750098;;;Parafia rzymskokatolicka pw. św. Brata Alberta
+90789887;;;Kościół świętego Antoniego
+92508856;;;Kościół pw. Św. Mikołaja
+93198838;;;Kościół Świętego Mikołaja
+93283981;;;Cerkiew Św. Bartłomieja
+93283982;;;Kościół św. Jakuba
+95093718;;;Kościół parafialny św. Pawła Apostoła
+95382408;;;Kościół parafialny świętych Anny i Joachima
+95560912;;;Kościół pw. Św. Jadwigi Śląskiej
+95564882;;;Klasztor Ojców Franciszkanów Niepokalanego Serca Maryi
+95698874;;;Kościół pw. Matki Boskiej Częstochowskiej
+96137887;;;Kościół Bożego Ciała
+96143633;;;Kościół Świętej Elżbiety
+96143663;;;Kościół pw. Świętego Józefa
+96209716;;;Kościół pw. Świętej Katarzyny
+96209723;;;Kościół Świętej Brygidy
+96749612;;;Kaplica Królewska
+97362471;;;Sala Zgromadzeń
+98214174;;;Kościół Świętej Rodziny
+98409446;;;Parafia pw. Chrystusa Króla
+100051958;;;Kościół pw. Świętej Rodziny
+100317268;;;Kościół pw. Świętej Faustyny Kowalskiej
+101784474;;;Kościół pw. Najświętszej Maryi Panny Królowej Różańca Świętego
+101851858;;;Sala Królestwa Świadków Jehowy
+101914582;;;Kościół św. Jana Chrzciciela
+102547738;;;Ośrodek Buddyjski Karma Kagyu
+102551214;;;Parafia rzymskokatolicka Chrystusa Odkupiciela
+102696309;;;Parafia rzymskokatolicka Matki Bożej Fatimskiej
+103325275;;;Kościół Św. Stanisława Kostki
+103572688;;;Kościół pw. Najświętszej Maryi Panny Królowej Polski
+103851710;;;Parafia rzymskokatolicka pw. Bożego Ciała
+104354205;;;Parafia pw. św. Maksymiliana Kolbe
+104354212;;;Sala Królestwa Świadków Jehowy
+104792506;;;Kościół Niepokalanego Poczęcia Najświętszej Maryi Panny
+104829805;;;Kościół świętego Franciszka z Asyżu
+105212700;;;Kościół świętego Ignacego Loyoli
+105587582;;;św. Urszuli Ledóchowskiej
+105697374;;;Św. Jadwigi Królowej
+105792061;;;Kościół pw. Miłosierdzia Bożego
+107083404;;;Parafia Zwiastowania Najświętszej Maryi Panny
+107462370;;;Sala Królestwa Świadków Jehowy
+108130452;;;KOŚCIÓŁ ZMARTWYCHWSTAŃCÓW
+108427530;;;Kaplica Polowa (lipiec i sierpień)
+108484545;;;Kościół pw. Świętej Marii Magdaleny
+111614928;;;Parafia pw. Św. Judy Tadeusza
+111751617;;;Kościół parafialny św. Wojciecha
+111765880;;;Kościół pw. Świętego Jana Bosko
+112188974;;;Kościół parafialny pw. NMP Królowej Różańca Świętego
+112614172;;;Kościół pw. Matki Boskiej Bolesnej
+113835382;;;Kościół pw. św. Jana z Kęt
+114251502;;;Sala Królestwa Świadków Jehowy
+115554104;;;Kościół pw. św. Bernarda
+115615241;;;Kościół pw. Matki Bożej Saletyńskiej
+115994423;;;Kościół Najświętszego Serca Pana Jezusa
+116806372;;;Kościół św. Jana Chrzciciela
+116815113;;;Kościół pw. Świętego Stanisława Biskupa i Męczennika i Świętej Karoliny
+119371022;;;Kościół pw. Świętego Mikołaja
+120744389;;;Wniebowzięcia Najświętszej Maryi Panny
+120863155;;;Kościół pw. Podwyższenia Św.Krzyża
+121240015;;;Kościół pw. św. Józefa
+121267300;;;Kościół Bł. Doroty z Mątów
+121613710;;;Kościół pw. NMP Matki Kościoła
+122364206;;;Kościół parafialny pw. Św. Wawrzyńca
+123498181;;;Świętego Michała
+123501892;;;Kościół garnizonowy świętego Jerzego
+124025536;;;Gwiazda Morza
+124187293;;;Kościół Zbawiciela
+125988905;;;Kościół Nowoapostolski
+126059445;;;Kościół pw. Chrystusa Miłosiernego
+126118287;;;Matki Bożej Częstochowskiej
+126171455;;;Parafia św. Antoniego z Padwy, Sanktuarium Matki Bożej Matki Nadziei i św. Maksymiliana Kolbego
+126326096;;;Kościół pw. NMP Królowej Polski
+126326097;;;Kościół pw. NMP Królowej Polski
+126343908;;;Kościół pw. Najświętszego Serca Pana Jezusa
+126444775;;;Parafia pw. Jezusa Chrystusa Króla Wszechświata
+127722288;;;Kościół pw. Matki Boskiej Bolesnej
+128819269;;;Kościół świętego Mikołaja
+130099165;;;świętego Wawrzyńca
+130639465;;;Kościół Niepokalanego Serca Maryi
+130733005;;;Kościół pw. Świętej Trójcy
+131585061;;;Kościół pw. Podwyższenia Krzyża Świętego i Niepokalanego Poczęcia NMP
+131592913;;;Kościół pw. św. Maksymiliana Marii Kolbego
+132216093;;;Kościół pw. Św. Urszuli Ledóchowskej
+133012433;;;Kościół pw. św. Stanisława Kostki
+133018058;;;Kościół Wniebowzięcia Najświętszej Maryi Panny
+134446120;;;Świętego Mikołaja
+134951505;;;Kościół pw. Przemienienia Pańskiego
+135130691;;;Kościół pw. Jezusa Dobrego Pasterza
+135185437;;;Kościół pw. Matki Boskiej Różańcowej
+136362686;;;Kościół św. Jana Chrzciciela i św. Alberta Chmielowskiego
+136632918;;;Parafia św. Judy Tadeusza
+137093396;;;kaplica cmentarna
+137172247;;;Kościół pw. św. Andrzeja Boboli
+137667722;;;Sala Królestwa Świadków Jehowy
+138379916;;;Parafia pw. Ducha Świętego
+138571282;;;Kościół pw. św. Antoniego Padewskiego
+139934647;;;Kościół pw. Wniebowzięcia NMP i św. Katarzyny
+140381329;;;Kościół św. Jakuba
+142784908;;;Kościół NMP Wspomożenia Wiernych
+142819848;;;Sala Królestwa Świadków Jehowy
+143108640;;;Kościół świętego Jana
+143840076;;;pw. św. Faustyny Kowalskiej
+144318099;;;Kościół Narodzenia Najświętszej Maryi Panny
+147124219;;;
+147405465;;;Parafia pw. Świętego Jana Pawła II
+147421064;;;Kościół pw. Matki Bożej Różańcowej
+147536842;;;Kościół Najświętszej Maryi Panny Królowej Polski
+147722633;;;Kościół pw. Chrystusa Króla i bł. Alicji Kotowskiej
+148079689;;;Kościół pw. Świętego Stanisława Kostki
+148079775;;;Kościoł pw. Św. Leona Wielkiego
+148085270;;;Kolegiata Trójcy Świętej
+148093957;;;Kościół pw. św. Anny
+148229507;;;Kościół pw. Wniebowzięcia NMP
+148578880;;;Kościół pw. św. Mikołaja
+149554240;;;Kościół pw. Św. Józefa
+149570245;;;Kościół świętego Mateusza
+149570247;;;Kościół świętej Katarzyny
+151905385;;;Świętej Teresy Benedykty od Krzyża
+157315159;;;Kościół pw. św. Br. Alberta Chmielowskiego
+158918387;;;pw. Św. Krzysztofa
+159744352;;;Kościół pw. Bożego Ciała
+160893211;;;Kościół Św. Karola Boromeusza
+161766347;;;Kościół NMP Matki Kościoła
+161991886;;;Kościół pw. św. Wojciecha
+162113790;;;Kościół pw. św. Michała Archanioła
+162277469;;;Kościół pw. WNMP
+162547004;;;kośćiół pw. Matki Boskiej Nieustającej Pomocy
+164436940;;;Parafia pw. św. Antoniego Padewskiego
+164526213;;;Kościół pw. Podwyższenia Krzyża Świętego
+164577709;;;Kościół pw. Miłosierdzia Bożego
+164688947;;;Parafia rzymsko-katolicka pw. Św. Jana Chrzciciela
+164842760;;;p.w. Świętego Rocha
+164927308;;;Kaplica Św. Jana Nepomucena
+164962592;;;Parafia pw. Podwyższenia Krzyża Świętego
+165081455;;;Narodzenia Najświetszej Maryi Panny
+165455353;;;Parafia Rzymskokatolicka pw. św. Kazimierza
+165928154;;;Kościół Świętej Barbary
+166548915;;;Kościół pw. Miłosierdzia Bożego
+166708237;;;pw. Najświętszego Serca Pana Jezusa
+166991039;;;Parafia rzymskokatolicka pw. Św. Jadwigi Królowej
+166994736;;;Parafia św. Apostołów Piotra i Pawła
+166998936;;;Parafia rzymsko-katolicka pw. Wniebowzięcia Najświętszej Maryi Panny
+167210829;;;Świętej Anny
+167246991;;;Kościół pw. św. Antoniego z Padwy
+167335705;;;kaplica cmentarna
+167561275;;;Kościół pw.MB Nieustającej Pomocy i Św. Piotra Rybaka
+167570494;;;Kościół pw. Matki Boskiej Nieustającej Pomocy
+168447778;;;Kościół pw. św.Kingi
+168703751;;;Cerkiew Poczęcia Świętego Jana Chrzciciela
+168908193;;;Bazylika archikatedralna w Gdańsku-Oliwie
+169010551;;;Kościół św. Franciszka Ksawerego
+169089384;;;Kościół proparafialny M.B. Królowej Różańca Świętego
+169254123;;;Zesłania Ducha Św.
+169523590;;;Kościół parafialny pw. św. Mikołaja
+170639941;;;Kościół św. Apostołów Szymona i Judy Tadeusza oraz św. Marii Magdaleny
+170928041;;;Kościół pw. świętego Andrzeja Boboli
+173212815;;;Chrystusa Króla
+173269193;;;Parafia pod wezwaniem Wszystkich Świętych
+176048721;;;Kościół Św. Mikołaja
+176320730;;;Kościół pw. św. Mateusza Apostoła
+177797732;;;Kościół parafialny pw. Najświętszego Serca Pana Jezusa
+178238058;;;Kościół pw. Nawiedzenia Najświętszej Maryi Panny
+179368593;;;Kościół św. Jana Chrzciciela i św. Mikołaja
+180324529;;;Kościół pw. Świętego Rafała Kalinowskiego
+180851732;;;Kościół św. Jadwigi
+180876929;;;Kościół Garnizonowy pw. MB Częstochowskiej
+182567020;;;Kościół pw. Św. Józefa Rzemieślnika
+183639509;;;Parafia Matki Bożej Brzemiennej w Gdańsku Matemblewie
+184987593;;;Sw. Antoniego
+187006561;;;Wniebowstąpienia Pana Jezusa
+187237038;;;Kościół pw. Zwiastowania Pańskiego w Nowej Wiosce
+188147261;;;Kościół Najświętszego Imienia Maryi
+188203191;;;Kościół Matki Bożej Nieustającej Pomocy
+188398688;;;Parafia rzymskokatolicka pw. św. Brata Alberta
+188751285;;;Kościół pw. Matki Boskiej Nieustającej Pomocy
+188874555;;;Kościół pw. świętego Józefa
+188956119;;;Kościół pw. Przemienienia Pańskiego
+189186925;;;Kościół pw. św. Józefa
+189186967;;;Kościół pw. Najświętszego Serca Pana Jezusa
+192583580;;;Kościół świętego Jana Chrzciciela
+192583583;;;Kościół świętego Mikołaja
+192585279;;;Kościół parafialny pw. Narodzenia NMP
+192952938;;;Kościół pw. św. Jana Chrzciciela
+193184818;;;Kaplica Cmentarna
+193751882;;;Parafia Niepokalanego Poczęcia NMP
+194030677;;;Parafia pw. św. Mikołaja w Szemudzie
+194996626;;;Kościół pw. św. Polikarpa Biskupa Męczennika
+196399492;;;Kościół pw. Niepokalanego Serca Maryi Panny
+200490860;;;Zbór Kościoła Zielonoświątkowego
+201335920;;;Cerkiew Świętych Apostołów Piotra i Pawła
+201542322;;;Parafia św. Jakuba Apostoła
+201594423;;;Kościół pw. Trójcy Przenajświętszej
+203617340;;;
+203762369;;;Kościół pw. św. Ignacego Loyoli
+203814324;;;Cerkiew Św. Mikołaja
+205194804;;;Kościół pw. Nawiedzenia N.M.P.
+205280394;;;Kościół Św Apostołów Piotra i Pawła
+206444189;;;
+207743576;;;Kościół pw. Matki Boskiej Nieustającej Pomocy
+209744356;;;Kościół pw. Św. Józefa
+210650520;;;Kościół Miłosierdzia Bożego
+215231515;;;Kościół Świętego Andrzeja
+215231518;;;Konkatedra św. Wojciecha
+216944186;;;Kościół św. Jana Chrzciciela
+218704716;;;Św. Urszuli Ledóchowskiej
+219963147;;;Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny
+221400907;;;Konkatedra pw. św. Jana Ewangelisty
+221478147;;;Kościół filialny pw. Najświętszego Serca Pana Jezusa
+221478155;;;Kościół pod wezwaniem Chrystusa Króla
+221478160;;;Kościół pw. św. Jana Chrzciciela
+221486536;;;Kościół pw. Świętych Apostołów Piotra i Pawła
+222887904;;;św. Ojca Pio
+223109950;;;Kościół par. pw. Matki Boskiej Szkaplerznej
+223572365;;;Kościół Miłosierdzia Bożego
+223587933;;;Kościół pw. św. Rodziny
+224142061;;;Kościół pw. świętego Jana Ewangelisty
+224222561;;;Kościół pw. Św. Wawrzyńca
+224283624;;;Kapliczka świętej Rozalii
+224287314;;;Kościół par. pw. Oczyszczenia NMP
+224500460;;;Kościół pw. Św. Trójcy
+225661719;;;Kościół pw. Św. Wojciecha
+225916248;;;Kościół Parafii Najświętszego Serca Pana Jezusa
+226079129;;;Kościół pw. św. Trójcy
+226083959;;;Św. Teresy od Dzieciątka Jezus
+226280309;;;Parafia pw. Najświętszej Maryi Panny Częstochowskiej
+226392277;;;Kościół pw. Matki Boskiej Różańcowej
+226404573;;;Kościół pw. Św. Apostołów Piotra i Pawła
+226408925;;;pw. św. Aniołów Stróżów
+226561750;;;Kościół pw. św. Maksymiliana Marii Kolbe
+226604840;;;Kościół świętej Katarzyny
+226907665;;;Kościół pw. św. Marcina
+228432192;;;Kościół pw. Narodzenia Najświętszej Maryi Panny
+228651431;;;Kościół pw. Świętej Rodziny
+228850315;;;Kościół św. Wojciecha i św. Brata Alberta Chmielowskiego
+231247234;;;Kościół Podwyższenia Krzyża Świętego
+231750008;;;Św Piotra Apostoła i Św Franciszka z Asyżu
+232360607;;;Parafia pw. św. Jakuba Apostoła Starszego
+233446029;;;Kościół pw. Świętego Marcina
+234541529;;;Kościół pw. Świętego Michała Archanioła
+235670757;;;Kościół pod wezwaniem Błogosławionego Księdza Józefa Jankowskiego
+235934426;;;Kościół św. Szymona
+236748179;;;Kościół pw. Świętego Walentego
+237180596;;;Kościół świętego Jana Chrzciciela
+237277755;;;Kościół pw. Wszystkich Świętych
+237337234;;;Paradia Matki Bożej Królowej Polski
+237429306;;;Kościół pw. świętych Piotra i Pawła
+238110634;;;pw. św. Barbary
+238110688;;;
+238131704;;;Sanktuarium Miłosierdzia Bożego
+238610026;;;Kościół Kościół pw. śś. Apostołów Filipa i Jakuba
+238841776;;;Kaplica Ukrzyżowania - Pan Jezus na krzyżu umiera
+238841785;;;Kaplica Biczowania
+238939354;;;Kościół św. Katarzyny
+239046414;;;Kościół filialny pw. NMP Wspomożenia Wiernych
+239153900;;;Kościół pw. Św. Anny
+241981746;;;Kościół pw. Wniebowzięcia Najświętszej Maryi Panny
+242185571;;;kaplica cmentarna
+242456924;;;Kościół pw. Najświętszego Serca Pana Jezusa
+242912580;;;Kościół pw. Jasnogórskiej Królowej Polski
+243626533;;;św. Maksymiliana Marii Kolbego
+244162167;;;Kościół pw. św. św. Królowej Jadwigi
+244329475;;;Kościół pw. św. Andrzeja Boboli
+244518913;;;Kościół Rzymskokatolicki im. Ignacego Loyoli
+245770031;;;kościól
+246443570;;;Kościół pw. św. Jakuba
+249902394;;;kaplica NMP Wspomożycielki Wiernych
+253788626;;;Kościół filialny pw. Niepokalanego Poczęcia Najświętszej Marii Panny
+256527048;;;św. Jadwiga Śląska
+256696805;;;Kościół pw. Świętej Trójcy
+256699346;;;Cerkiew Greckokatolicka św. Włodzimierza i Olgi w Miastku
+256809538;;;Kościół pw św. Marii Magdaleny
+256972543;;;Kościół parafialny pw. świętego Antoniego
+257251051;;;Kościół pw. Wniebowstąpienia Pańskiego
+257538830;;;Kościół NMP Królowej Polski
+260320844;;;Kościół pw. św. Jana Chrzciciela i św. Michała
+260355004;;;Kościół pw. Najświętszego Serca Jezusowego
+260355007;;;Kościół pw. Najświętszej Maryi Panny Królowej Różańca Świętego
+260355010;;;Kościół pw. Świętego Jacka
+260355015;;;Kościół pw. Świętego Ottona
+261209399;;;Kapliczka szpitalna
+261424742;;;Kaplica cmentarna, cmentar
+261512876;;;Kościół Chrześcijan Baptystów
+262043684;;;Parafia Miłosierdzia Bożego
+262901863;;;Kościół pw. Św. Teresy od Dzieciątka Jezus
+264595525;;;
+265195108;;;Św. Apostołów Szymona i Judy Tadeusza
+271142555;;;Kościół pw. Najświętszego Zbawiciela
+271265487;;;Kościół pw. św. Andrzeja Apostoła
+271502287;;;Kościół pw. Zmartwychwstania Pańskiego
+271720182;;;Kościół pw. św. Stanisława Kostki
+273645032;;;Kościół pw. Św. Maksymilian Kolbego
+274188501;;;Kościół ewangelicki
+274635446;;;Kościół pw. św. Piotra i Pawła w Lubaniu
+278503815;;;Kościół pw. św. Piotra i Pawła
+279874195;;;Kościół pw. Świętego Józefa
+281317542;;;Michała Archanioła
+282626534;;;Kościół pw. św. Katarzyny Aleksandryjskiej
+283556237;;;Kaplica św. Katarzyny Aleksandryjskiej
+283622537;;;Kościół pw. Świętej Trójcy
+288448579;;;Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny
+288448580;;;Kościół pw. Świętego Bartłomieja Apostoła
+288449320;;;Kościół Najświętszego Serca Pana Jezusa
+288826171;;;Kościół pw. św. Apostołów Piotra i Pawła
+289947350;;;Kościół luterański
+289947365;;;Świętego Maksymiliana Kolbe par. Gniew
+291432953;;;Kościół Zielonoświątkowy Zbór w Kwidzynie
+291972087;;;Kościół pw. Wniebowzięcia Najświętszej Marii Panny
+292830619;;;Kościół pw. Świętej Trójcy
+293664229;;;Kościół pw. Najświętszego Serca Pana Jezusa i św. Mikołaja
+295258208;;;Zbór ewangelicko-augsburski
+295999080;;;Kościół pw. NMP Królowej Pokoju
+296045963;;;Kościół pw. Apostołów Piotra i Pawła
+297873261;;;Kościół pw. Świętej Urszuli Ledóchowskiej
+298269089;;;Kościół pw. Świętego Józefa Oblubieńca
+298794054;;;Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny
+300226783;;;Drewniany Zabytkowy Kościół
+300226802;;;Kościół św. Marcina
+300240602;;;Kościół św. Jana Chrzciciela
+300625782;;;
+300695242;;;Kościół pw. św. Urszuli
+300833813;;;Kościół pw. Opatrzności Boskiej i św. Jerzego
+301101592;;;Kościół pw. Matki Boskiej Częstochowskiej
+301445445;;;św. Jakuba Apostoła
+301820144;;;Cerkiew Greckokatolicka pw. zesłania Ducha Świętego
+301820147;;;Kaplica pw. św. Anny
+301820148;;;Parafia pw. Trójcy Przenajświetszej
+301834004;;;
+301840735;;;Kościół pw. Ciała i Krwi Pańskiej
+301840736;;;Kościół parafialny pw. świętego Rocha
+301980292;;;Kościół pw. Świętego Jakuba Apostoła
+302013584;;;Kościół pw. Świętego Józefa
+302820151;;;Parafia Miłosierdzia Bożego
+302822412;;;Kościół św. Michała Archanioła w Łebuni
+302962721;;;Kościół Zielonoświątkowy "Ziarno Nadziei"
+303156569;;;Kościół pw. Świętej Anny
+303496677;;;Kosciół pw. Świętego Jana Chrzciciela
+304282297;;;Sala Królestwa Świadków Jehowy
+304340031;;;Kościół Miłosierdzia Bożego
+304342601;;;Kościół pw. świętego Michała Archanioła
+304366684;;;Kościół pw. świętego Maksymiliana Kolbego
+304438285;;;Kościół pw. Narodzenia Najświętszej Maryi Panny
+304464029;;;Kośćiół pw. Najświętszego Serca Pana Jezusa
+304604481;;;Kościół filialny pw. świętego Bartłomieja
+304604499;;;Kościół parafialny pw. Wniebowzięcia Najświętszej Marii Panny
+304687124;;;Sala Królestwa Świadków Jehowy
+305270928;;;Kościół pw. Świętego Antoniego Padewskiego
+305873825;;;Kościół pw. Jezusa Chrystusa Króla Wszechświata
+307308733;;;Kościół pw. Matki Boskiej Częstochowskiej
+307790927;;;Kościół pod wezwaniem Św. M. Archanioła
+308804755;;;
+308804758;;;Kościół pw. św. Jakuba Apostoła
+309285610;;;Parafia Rzymskokatolicka pw. Nawiedzenia Najświętszej Maryi Panny
+309532884;;;Parafia Jezusa Chrystusa Króla Wszechświata
+309922771;;;Kościół pw. świętego brata Alberta
+310644661;;;Kaplica cmentarna
+310689934;;;Kaplica
+314091975;;;Kościół filialny Znalezienia Krzyża Świętego
+314286739;;;
+314324199;;;
+314325920;;;Kościół pw. Podwyższenia Krzyża Świętego
+314530792;;;
+314875725;;;
+314876259;;;
+314877551;;;
+314961603;;;
+315230458;;;
+315785933;;;Kościół pw. Matki Boskiej Częstochowskiej
+315871700;;;Kolegiata Żuławska pw. Świętego Mateusza Apostoła
+316264208;;;
+318129681;;;
+318455967;;;Meczet imienia Dżamala ad-Dina Al-afganiego
+320747405;;;Kościół filialny św. Judy Tadeusza
+321447766;;;
+321628746;;;
+321628748;;;
+324061437;;;
+324061439;;;
+324061440;;;
+324077852;;;
+324824163;;;
+324940977;;;
+325987659;;;
+328461543;;;Kościół pw. św. Barbary
+333464332;;;
+334167441;;;
+342336447;;;Kościół pw. Bożego Ciała
+342336448;;;
+342570858;;;Kościół filialny pw. Narodzenia Najświętszej Maryi Panny w Kozinie
+342973502;;;
+345707639;;;
+345707640;;;
+346041424;;;
+346041425;;;
+346041426;;;
+348881006;;;
+348881007;;;
+351720298;;;Kościół pw. Wniebowzięcia Najświętszj Marii Panny
+352213820;;;
+352315101;;;Kościół świętego Antoniego Padewskiego
+352799554;;;Kościół Wniebowzięcia NMP
+352985619;;;Kościół pw. Wniebowzięcia Najświętszej Maryi Panny
+353000595;;;Parafia Rzymsko – Katolicka pw. Św. Wojciecha Biskupa i Męczennika w Kielnie
+355653874;;;
+355653876;;;
+355802243;;;
+355802246;;;
+355802249;;;Kościół Chrystusa Króla Wszechświata
+356118936;;;Kościół pw. Najświętszej Maryi Panny Matki Kościoła
+356213810;;;
+356213812;;;
+356365574;;;
+356383790;;;
+356815184;;;Kościół św. Filipa Neri
+357247607;;;
+358158023;;;Kościół pw. Niepokalanego Poczęcia NMP
+360450921;;;
+361272091;;;
+362147248;;;Kościół św. Barbary
+362473515;;;Świętego Judy Tadeusza
+362597925;;;Kościół p.w. Wniebowzięcia Najświętszej Maryi Panny
+362664355;;;
+363031788;;;Kościół p.w. Podwyższenia Krzyża Świętego
+363031809;;;Świątynia
+363562522;;;Nowa Synagoga
+363771438;;;Parafia Rzymskokatolicka  pw. Najświętszej Maryi Panny Królowej Korony Polskiej
+366253650;;;
+367324180;;;św. Józefa
+368496233;;;Kościół pw. Świętego Józefa
+369571863;;;
+369649197;;;Kościół Matki Boskiej Królowej Polski
+369660444;;;
+369660446;;;
+371146084;;;Kościół Znalezienia Krzyża
+371167476;;;
+371315251;;;
+371336875;;;
+371345337;;;
+371578874;;;Kościół pw. Świętego Jana Chrzciciela
+372099221;;;kaplica
+376444002;;;Kościół Podwyższenia Krzyża Świętego w Pruszczu
+381567284;;;Parafia św. Maksymiliana Kolbego
+381748573;;;Kaplica Cmentarna Matki Bożej Bolesnej
+381748579;;;Kaplica przyszpitalna
+385414203;;;Parafia Rzymsko-Katolicka p.w. Zesłania Ducha Świętego
+386198478;;;
+386307356;;;
+386724619;;;Klasztor Sióstr Karmelitanek Bosych
+388673955;;;
+390664366;;;Kościół Zielonoświątkowy Zbór "Pojednanie"
+395887674;;;XXIII. Kościół Trzech Krzyży
+402695562;;;Kościół pw. Świętego Brata Alberta
+404311479;;;Ewangelicko-Augsburski Świętego Krzyża - Kaplica w Lęborku
+408817174;;;Sala Królestwa Świadków Jehowy
+415757619;;;
+424538167;;;
+424882016;;;
+426784149;;;Kościół pw. Podwyższenia Krzyża Świętego
+428714968;;;Kościół pw. świętej Anny
+428792960;;;Kościół pw. Świętego Józefa Oblubieńca
+430146843;;;Kościół pw. św. Marka
+431069408;;;Kościół pw. św. Piotra i Pawła
+432008134;;;Kościół pw. Wniebowzięcia Najświętszej Maryi Panny
+432079769;;;Kościół pw. Świętej Marii Magdaleny
+432724333;;;Kościół pw. Świętego Marcina
+432726207;;;Kościół pw. Świętego Wojciecha
+432730131;;;Kościół pw. Świętego Marka Ewangelisty
+432730132;;;Kościół
+432762144;;;Kościół pw. Świętego Franciszka z Asyżu
+433170493;;;Kościół pw. Świętej Rodziny
+433197610;;;Kościół pw. Świętego Józefa
+434410184;;;Kaplica cmentarna
+434500531;;;Kościół pw. Najświętszej Maryi Panny Gwiazdy Morza
+434753194;;;Kościół pw. Matki Boskiej Częstochowskiej
+434777159;;;Kościół pw. Najświętszego Serca Pana Jezusa
+434809210;;;Kościół pw. Świętego Antoniego Padewskiego
+434901079;;;Kościół pw. Świętej Teresy od Dzieciątka Jezus
+434932940;;;Kościół
+437003277;;;Kościół pw. Świętej Jadwigi Królowej
+437110819;;;
+437114187;;;Kościół pw. św. Izydora
+437565699;;;Kościół pw. Błogosławionego Michała Kozala
+438562389;;;
+441660463;;;
+442718525;;;Św. Antoniego Padewskiego
+445014311;;;Kościół pw. św. Antoniego Padewskiego
+450839130;;;
+456367629;;;Św. Stanisława Kostki
+462188302;;;Kościół pw. św. Wawrzyńca
+462207440;;;
+465379214;;;
+475147152;;;Kościół pw. Matki Boskiej Fatimskiej
+478947678;;;Kościół pw. św. Urszuli Ledóchowskiej
+479096582;;;Kościół filialny pw. św. Piotra
+479183720;;;Kościół filialny pw. Narodzenia NMP
+481767572;;;Kościół parafialny pw. Niepokolanego Poczęcia NMP
+481976994;;;Kościół filialny pw. św. Antoniego z Padwy
+482084710;;;pw. św. Jakuba i Mikołaja
+488484068;;;Kościół pw. Matki Boskiej Częstochowskiej
+488644455;;;Kościół pw. Oblubieńca NMP
+493113768;;;Kaplica dojazdowa pw. Narodzenia Najświętszej Maryi Panny w Bukowinie
+493333809;;;Kaplica p.w. Jana Chrzciciela
+496586090;;;
+498556933;;;
+498556950;;;Golgota
+499270783;;;Kościół pw Maksymiliana Kolbego
+505286187;;;Kościół św. Andrzeja Boboli w Rokitach
+505366348;;;
+505398409;;;Kościół św. Antoniego Padewskiego w Nożynie
+506173236;;;Kościół świętego Wojciecha
+508285817;;;Kościół pw. św. Mikołaja
+513156793;;;Kościół pw. Matki Bożej Nieustającej Pomocy
+513159102;;;Plac Koronacyjny figury Matki Bożej Pocieszenia
+513159104;;;Sanktuarium Matki Bożej Pocieszenia
+513346134;;;Parafia pw. Najświętszej Maryi Panny z Lourdes
+515293136;;;Sala Królestwa Świadków Jehowy
+515323844;;;
+515782748;;;
+518617951;;;Św. Andrzeja Apostoła
+524098176;;;Kościół pw. św. Michała
+525047121;;;Kościół pw. Najświętszego Serca Pana Jezusa
+525047128;;;Kościół pw. świętego Mikołaja Biskupa
+525838273;;;Ołtarz polowy
+525857837;;;Kościół pw. Matki Bożej Częstochowskiej
+526589718;;;Kościół pw. Matki Boskiej Częstochowskiej
+526605516;;;Kościół pw. Świętego Antoniego Padewskiego
+528710026;;;Katedra Wniebowzięcia NMP
+528947172;;;Sala Królestwa Świadków Jehowy
+529263902;;;Kościół pw. Matki Bożej Nieustającej Pomocy
+529275167;;;Kościół pw. Świętego Józefa
+529279437;;;Kościół pw. Najświętszego Serca Pana Jezusa
+529386713;;;Kościół pw. Świętego Jana Chrzciciela
+529393663;;;Kościół pw. Świętej Elżbiety
+529543627;;;Kaplica cmentarna
+529909546;;;Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny
+529976428;;;Kościół pw. Najświętszego Serca Jezusowego
+530206618;;;Kaplica cmentarna
+530225227;;;Kościół pw. Trójcy Świętej
+530233128;;;Kaplica
+533764608;;;Kościół filialny pw. św. Michała Archanioła w Obozinie
+533790815;;;Kościół pw. św. Jana Nepomucena w Godziszewie
+535476285;;;
+540737316;;;Kościół parafialny św. Stanisława Biskupa i Męczennika w Skórowie
+542485271;;;Kościół św. Józefa w Postołowie
+542491637;;;Kościół filialny Ofiarowania Najświętszej Maryi Panny
+542494562;;;Kaplica filialna św. Ojca Pio w Pawłowie
+543502639;;;Kościół Przemienienia Pańskiego w Sobowidzu
+548847638;;;Kościół Św. Jacka Odrowąża w Straszynie
+549512784;;;
+549512785;;;
+569083895;;;Ołtarz
+574799974;;;Kościół pw. Św. Katarzyny Aleksandryjskiej
+574873092;;;Kościół pw. św. Marcina
+574875512;;;Kościół pw. św. Jakuba Apostoła
+574999653;;;Kościół pw. św. Marii Magdaleny
+576873406;;;Kościół filialny p.w św. Józefa w Salinie
+578593118;;;Kościół p.w.Matki Bożej Wniebowzięcia
+578593120;;;Kościół św. Szymona i Judy Tadeusza
+578593121;;;Kościół p.w. św. Szymona i Judy Apostołów
+581198598;;;
+581249083;;;
+3190197;;;kościół Niepokalanego Serca Najświętszej Maryi Panny
+3285558;;;Kościół pw. Narodzenia NMP

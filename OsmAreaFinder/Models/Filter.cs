@@ -12,5 +12,11 @@ namespace OsmAreaFinder.Models
         public string ObjectType { get; set; }
         [Display(Name = "Maksymalna odległość (metry)")]
         public double Distance { get; set; }
+
+        public Filter(string type, double dist)
+        {
+            ObjectType = type;
+            Distance = dist;
+        }
     }
 }

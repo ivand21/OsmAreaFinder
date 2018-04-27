@@ -22,7 +22,7 @@ function search() {
         var radius = circle.getRadius();
         var circleTransform = circle.transform('EPSG:3857', 'EPSG:4326');
         var coords = circleTransform.getCenter();
-        $("#map-text").html("Promień obszaru: " + coords[0]);
+        $("#map-text").html("Promień obszaru: " + radius);
     }
 
     var data = JSON.stringify({ 'Radius': radius, 'Lon': coords[0], 'Lat': coords[1], 'Filters': getAllFilters() });
@@ -33,12 +33,19 @@ function search() {
         dataType: 'json',
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify({ 'filters': data }),
-        success: function () {
-            console.log()
-            alert("Działa");
+        success: function (response) {
+            console.log(response);
+            if (response.Message)
+            {
+                alert('Znaleziono punkt');
+            }
+            else
+            {
+                alert('Nie znaleziono punktu');
+            }
         },
         error: function () {
-            alert("Dupa");
+            alert("Coś nie działa");
         }
     });
 }

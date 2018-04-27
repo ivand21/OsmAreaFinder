@@ -21,9 +21,9 @@ namespace OsmAreaFinder.Controllers
         public ActionResult Search(string filters)
         {
             var data = JsonConvert.DeserializeObject<UserRequest>(filters);
-            //GeoDataHelper.ValidatePoint()
+            var isValid = GeoDataHelper.ValidatePoint(data);
 
-            return Json(new { Message = filters, JsonRequestBehavior.AllowGet });
+            return Json(new { Message = isValid });
         }
 
        

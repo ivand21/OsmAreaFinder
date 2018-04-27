@@ -1,4 +1,6 @@
-﻿using OsmAreaFinder.Models;
+﻿using Newtonsoft.Json;
+using OsmAreaFinder.Helpers;
+using OsmAreaFinder.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +12,18 @@ namespace OsmAreaFinder.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index(OsmAreaFinder.Models.Filter f)
+        public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Search(string filters)
+        {
+            var data = JsonConvert.DeserializeObject<UserRequest>(filters);
+            //GeoDataHelper.ValidatePoint()
+
+            return Json(new { Message = filters, JsonRequestBehavior.AllowGet });
         }
 
        

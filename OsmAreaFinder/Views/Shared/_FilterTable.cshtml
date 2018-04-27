@@ -1,11 +1,14 @@
-﻿<table id="filter-table" class="table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Obiekt</th>
-            <th>Odległość max</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody id="filter-table-body"></tbody>
-</table>
-
+﻿@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <table id="filter-table" class="table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Obiekt</th>
+                <th>Odległość max</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="filter-table-body"></tbody>
+    </table>
+    <button type="button" class="btn btn-custom btn-lg btn-block" id="btn-search" onclick="search()">Szukaj</button>
+}

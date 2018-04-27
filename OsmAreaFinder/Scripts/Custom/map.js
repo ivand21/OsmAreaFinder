@@ -1,4 +1,10 @@
-﻿var raster = new ol.layer.Tile({
+﻿var s_lon = 18.638306;
+var s_lat = 54.372158;
+var draw;
+var lastFeature;
+
+
+var raster = new ol.layer.Tile({
     source: new ol.source.OSM()
 });
 
@@ -17,13 +23,8 @@ var map = new ol.Map({
     })
 });
 
-var lon = 18.638306;
-var lat = 54.372158;
+map.getView().setCenter(ol.proj.transform([s_lon, s_lat], 'EPSG:4326', 'EPSG:3857'));
 
-map.getView().setCenter(ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'));
-
-var draw;
-var lastFeature;
 function addInteraction() {
     draw = new ol.interaction.Draw({
         source: source,
@@ -42,17 +43,4 @@ function addInteraction() {
 }
 
 addInteraction();
-
-$('#btn-start').click(startSearching);
-
-function startSearching() {
-    if (lastFeature) {
-        var circle = lastFeature.getGeometry();
-        var radius = circle.getRadius();
-        $("#map-text").html("Promień obszaru: " + radius);
-        //var coords = new OpenLayers.LonLat(circle.getCenter()[0], circle.getCenter()[1]).transform('EPSG:4326', 'EPSG:3857');
-
-        //vector.addMarker(new OpenLayers.Marker(circle.getCenter()));
-    }
-}
 

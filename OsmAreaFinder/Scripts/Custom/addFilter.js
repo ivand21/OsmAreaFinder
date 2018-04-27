@@ -9,7 +9,11 @@ function addFilter() {
 
     var str = '<tr><td>' + type + '</td><td>' + distance + '</td><td>' + btnRemove + '</td></tr>'
 
-    $('#filter-table-body').append(str);
+    var filterRepeatFlag = $('#filter-table-body').html().indexOf(type.toString());
+    var correctDistance = !isNaN(parseFloat(distance)) && isFinite(distance) && distance >= 0;
+
+    if (filterRepeatFlag == -1 && correctDistance)
+        $('#filter-table-body').append(str);
 }
 
 function delFilter(row) {

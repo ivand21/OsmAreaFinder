@@ -224,6 +224,7 @@
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\FilterList.cs" />
     <Compile Include="Models\GeoObject.cs" />
+    <Compile Include="Models\MinMaxList.cs" />
     <Compile Include="Models\PoiList.cs" />
     <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,11 +270,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63851</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62909/</IISUrl>
+          <IISUrl>http://localhost:63852/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

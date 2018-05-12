@@ -3,11 +3,12 @@
 function addFilter() {
 
     var type = $('#in-objtype').val();
+    var minmax = $('#in-minmaxtype').val();
     var distance = $('#in-distance').val();
 
     var btnRemove = '<img src="/Content/Images/icon-remove.png" onclick="delFilter($(this))" class="btn-del-filter"/>';
 
-    var str = '<tr><td>' + type + '</td><td>' + distance + '</td><td>' + btnRemove + '</td></tr>'
+    var str = '<tr><td>' + type + '</td><td>' + minmax + '</td><td>' + distance + '</td><td>' + btnRemove + '</td></tr>'
 
     var filterRepeatFlag = $('#filter-table-body').html().indexOf(type.toString());
     var correctDistance = !isNaN(parseFloat(distance)) && isFinite(distance) && distance >= 0;
@@ -59,8 +60,9 @@ function getAllFilters() {
     $('#filter-table').find('tr').not('thead tr').each(function (k,v) {
         var cells = $(this).find('td');
         var objectType = cells.eq(0).text();
-        var distance = cells.eq(1).text();
-        var filter = { 'ObjectType': objectType, 'Distance': distance };
+        var minmaxType = cells.eq(1).text();
+        var distance = cells.eq(2).text();
+        var filter = { 'ObjectType': objectType, 'MinMaxType': minmaxType, 'Distance': distance };
         filters.push(filter);
     });
     return filters;

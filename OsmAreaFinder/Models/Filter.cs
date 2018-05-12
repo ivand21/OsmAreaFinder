@@ -10,12 +10,17 @@ namespace OsmAreaFinder.Models
     {
         [Display(Name = "Obiekt")]
         public string ObjectType { get; set; }
-        [Display(Name = "Maksymalna odległość (metry)")]
+
+        [Display(Name = "Rodzaj filtru")]
+        public string MinMaxType { get; set; }
+
+        [Display(Name = "Odległość (metry)")]
         public double Distance { get; set; }
 
-        public Filter(string type, double dist)
+        public Filter(string type, string minmax, double dist)
         {
             ObjectType = type;
+            MinMaxType = minmax;
             Distance = dist;
         }
     }

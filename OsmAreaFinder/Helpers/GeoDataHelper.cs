@@ -25,6 +25,8 @@ namespace OsmAreaFinder.Helpers
                 using (StreamReader sr = new StreamReader(path))
                 {
                     bool isPointValid = false;
+                    bool foundPointOverMinValue = false;
+                    bool foundPointUnderMaxValue = false;
                     while (line != null)
                     {
                         line = sr.ReadLine();
@@ -36,14 +38,33 @@ namespace OsmAreaFinder.Helpers
                             GeoObject fileObj = new GeoObject(lat, lon);
                             GeoObject userObj = new GeoObject(data.Lat, data.Lon);
                             var dist = GetDistance(userObj, fileObj);
+
+
                             if (dist <= filter.Distance + data.Radius)
                             {
-                                isPointValid = true;
-                                break;
+                                if (filter.MinMaxType.Equals("Maksimum"))
+                                {
+                                    isPointValid = true;
+                                    break;
+                                }
+                                else if (filter.MinMaxType.Equals("Minimum"))
+                                {
+                                    foundPointUnderMaxValue = true;
+                                    isPointValid = false;
+                                    break;
+                                }
+                            }
+                            else if (!foundPointOverMinValue && filter.MinMaxType.Equals("Minimum") && (dist >= filter.Distance + data.Radius))
+                            {
+                                foundPointOverMinValue = true;
                             }
                         }
                         catch (Exception) { }
                     }
+
+                    if (!foundPointUnderMaxValue && foundPointOverMinValue)
+                        isPointValid = true;
+
                     if (!isPointValid) return false;
                 }
             }

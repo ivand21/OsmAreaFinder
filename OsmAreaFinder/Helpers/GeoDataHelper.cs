@@ -26,7 +26,7 @@ namespace OsmAreaFinder.Helpers
                 {
                     bool isPointValid = false;
                     bool foundPointOverMinValue = false;
-                    bool foundPointUnderMaxValue = false;
+                    bool foundPointUnderMinValue = false;
                     while (line != null)
                     {
                         line = sr.ReadLine();
@@ -49,7 +49,7 @@ namespace OsmAreaFinder.Helpers
                                 }
                                 else if (filter.MinMaxType.Equals("Minimum"))
                                 {
-                                    foundPointUnderMaxValue = true;
+                                    foundPointUnderMinValue = true;
                                     isPointValid = false;
                                     break;
                                 }
@@ -62,7 +62,7 @@ namespace OsmAreaFinder.Helpers
                         catch (Exception) { }
                     }
 
-                    if (!foundPointUnderMaxValue && foundPointOverMinValue)
+                    if (!foundPointUnderMinValue && foundPointOverMinValue)
                         isPointValid = true;
 
                     if (!isPointValid) return false;

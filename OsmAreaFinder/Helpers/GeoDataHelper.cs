@@ -27,6 +27,7 @@ namespace OsmAreaFinder.Helpers
                     bool isPointValid = false;
                     bool foundPointOverMinValue = false;
                     bool foundPointUnderMinValue = false;
+                    string headerLine = sr.ReadLine();
                     while (line != null)
                     {
                         line = sr.ReadLine();
@@ -59,7 +60,7 @@ namespace OsmAreaFinder.Helpers
                                 foundPointOverMinValue = true;
                             }
                         }
-                        catch (Exception) { }
+                        catch (Exception e) { Console.WriteLine(e.ToString()); }
                     }
 
                     if (!foundPointUnderMinValue && foundPointOverMinValue)
@@ -77,7 +78,7 @@ namespace OsmAreaFinder.Helpers
         }
 
         public static double GetDistance(GeoObject g1, GeoObject g2)
-        {           
+        {
             var dLat = Radian(g2.Lat - g1.Lat);
             var dLon = Radian(g2.Lon - g1.Lon);
             var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
@@ -131,5 +132,39 @@ namespace OsmAreaFinder.Helpers
             }
         }
 
+
+        public static List<Poi> GetPoiListFromFilters(UserRequest data)
+        {
+            var PoiListFromFilters = new List<Poi>();
+
+            foreach (var filter in data.Filters)
+            {
+                var path = Path.Combine(CSV_FILE_DIR, GetCsvFile(filter.ObjectType));
+                string line = "";
+
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string headerLine = sr.ReadLine();
+                    while (line != null)
+                    {
+                        line = sr.ReadLine();
+                        try
+                        {
+                            var values = line.Split(';');
+                            long id = Int64.Parse(values[0]);
+                            double lat = Double.Parse(values[1], CultureInfo.InvariantCulture);
+                            double lon = Double.Parse(values[2], CultureInfo.InvariantCulture);
+                            double radius = filter.Distance;
+                            string filtername = filter.ObjectType;
+                            string minmaxtype = filter.MinMaxType;
+                            PoiListFromFilters.Add(new Poi(lon, lat, filtername, radius, id, minmaxtype));
+                        }
+                        catch (Exception e){ Console.WriteLine(e.ToString()); }
+                    }
+                }
+                
+            }
+            return PoiListFromFilters;
+        }
     }
 }

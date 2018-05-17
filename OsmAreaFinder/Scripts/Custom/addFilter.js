@@ -28,6 +28,7 @@ function search() {
         var circleTransform = circle.transform('EPSG:3857', 'EPSG:4326');
         var coords = circleTransform.getCenter();
         $("#map-text").html("Promień obszaru: " + radius);
+        $("#map-text").append("/nPunkt środkowy: Lon:  " + coords[0] + "  Lat:  " + coords[1]);
     }
 
     var data = JSON.stringify({ 'Radius': radius, 'Lon': coords[0], 'Lat': coords[1], 'Filters': getAllFilters() });

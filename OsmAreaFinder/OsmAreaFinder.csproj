@@ -225,6 +225,7 @@
     <Compile Include="Models\FilterList.cs" />
     <Compile Include="Models\GeoObject.cs" />
     <Compile Include="Models\MinMaxList.cs" />
+    <Compile Include="Models\Poi.cs" />
     <Compile Include="Models\PoiList.cs" />
     <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

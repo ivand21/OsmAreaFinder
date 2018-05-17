@@ -21,9 +21,11 @@ namespace OsmAreaFinder.Controllers
         public ActionResult Search(string filters)
         {
             var data = JsonConvert.DeserializeObject<UserRequest>(filters);
-            var isValid = GeoDataHelper.ValidatePoint(data);
+            //var isValid = GeoDataHelper.ValidatePoint(data);
 
-            return Json(new { Message = isValid });
+            //data for script
+            var FiltredPoiList = GeoDataHelper.GetPoiListFromFilters(data);
+            return Json(new { Message = true });
         }
 
        

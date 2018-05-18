@@ -1,4 +1,8 @@
-﻿using OsmAreaFinder.Models;
+﻿using DotSpatial.Data;
+using DotSpatial.Positioning;
+using DotSpatial.Topology;
+using GeoAPI.CoordinateSystems;
+using OsmAreaFinder.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -10,116 +14,96 @@ namespace OsmAreaFinder.Helpers
 {
     public static class GeoDataHelper
     {
-        private static int R = 6378137; // Earth radius
         private static string CSV_FILE_DIR = Path.
-            Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Models/csv");
+            Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Models/shp");
 
-
-        public static bool ValidatePoint(UserRequest data)
+        public static List<PolygonReply> ProcessRequest(UserRequest req)
         {
-            foreach (var filter in data.Filters)
+            var polygons = new List<PolygonReply>();
+
+            IFeatureSet resultArea = CreateUserInputLayer(req.Lon, req.Lat, req.Radius);
+            foreach (var f in req.Filters)
             {
-                var path = Path.Combine(CSV_FILE_DIR, GetCsvFile(filter.ObjectType));
-                string line = "";
-
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    bool isPointValid = false;
-                    bool foundPointOverMinValue = false;
-                    bool foundPointUnderMinValue = false;
-                    string headerLine = sr.ReadLine();
-                    while (line != null)
-                    {
-                        line = sr.ReadLine();
-                        try
-                        {
-                            var values = line.Split(';');
-                            double lat = Double.Parse(values[1], CultureInfo.InvariantCulture);
-                            double lon = Double.Parse(values[2], CultureInfo.InvariantCulture);
-                            GeoObject fileObj = new GeoObject(lat, lon);
-                            GeoObject userObj = new GeoObject(data.Lat, data.Lon);
-                            var dist = GetDistance(userObj, fileObj);
-
-
-                            if (dist <= filter.Distance + data.Radius)
-                            {
-                                if (filter.MinMaxType.Equals("Maksimum"))
-                                {
-                                    isPointValid = true;
-                                    break;
-                                }
-                                else if (filter.MinMaxType.Equals("Minimum"))
-                                {
-                                    foundPointUnderMinValue = true;
-                                    isPointValid = false;
-                                    break;
-                                }
-                            }
-                            else if (!foundPointOverMinValue && filter.MinMaxType.Equals("Minimum") && (dist >= filter.Distance + data.Radius))
-                            {
-                                foundPointOverMinValue = true;
-                            }
-                        }
-                        catch (Exception e) { Console.WriteLine(e.ToString()); }
-                    }
-
-                    if (!foundPointUnderMinValue && foundPointOverMinValue)
-                        isPointValid = true;
-
-                    if (!isPointValid) return false;
-                }
+                bool isMin = f.MinMaxType == "Minimum";
+                var buffered = ApplyBuffer(GetShapefile(f.ObjectType), req.Radius, isMin);
+                resultArea = Intersect(resultArea, buffered);
             }
-            return true;
+
+            foreach (var f in resultArea.Features)
+            {
+                var item = new PolygonReply();
+                foreach (var coord in f.Coordinates)
+                {
+                    item.Vertices.Add(new Coord() { Lon = coord.X, Lat = coord.Y });
+                }
+                if (item.Vertices.Count > 0)
+                    polygons.Add(item);
+            }
+            return polygons;
         }
 
-        private static double Radian(double x)
+        public static IFeatureSet Intersect(IFeatureSet l1, IFeatureSet l2)
         {
-            return x * Math.PI / 180;
+            return l1.Intersection(l2, FieldJoinType.LocalOnly, null);
+            //output.SaveAs("inter.shp", true);
+            //return output;
         }
 
-        public static double GetDistance(GeoObject g1, GeoObject g2)
+        public static IFeatureSet ApplyBuffer(string inpath, double distance, bool isMin)
         {
-            var dLat = Radian(g2.Lat - g1.Lat);
-            var dLon = Radian(g2.Lon - g1.Lon);
-            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-              Math.Cos(Radian(g1.Lat)) * Math.Cos(Radian(g2.Lat)) *
-              Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            return R * c;
+            IFeatureSet fs = FeatureSet.Open(inpath);      
+            IFeatureSet bs = fs.Buffer(distance, false);
+            return bs;
+            //bs.SaveAs(@"Municipalities_Buffer.shp", true);
         }
 
-        public static string GetCsvFile(string key)
+        public static IFeatureSet CreateUserInputLayer(double lon, double lat, double radius)
+        {
+            FeatureSet fs = new FeatureSet(DotSpatial.Topology.FeatureType.Polygon);
+            Feature center = new Feature(new Coordinate(lon, lat));
+
+            var xy = new double[1] { radius };
+            var z = new double[1] { 1.0 };
+            var dist = new Distance(radius, DistanceUnit.Meters);
+            
+            var circle = center.Buffer(radius);
+            fs.AddFeature(circle);
+            return fs;
+            //fs.SaveAs("outfile.shp", true);
+        }
+
+        public static string GetShapefile(string key)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>()
             {
-                { "Sklep monopolowy", "alcohol.csv" },
-                { "Bank", "bank.csv" },
-                { "Bar", "bar.csv" },
-                { "Przystanek autobusowy", "bus_stop.csv" },
-                { "Kawiarnia", "cafe.csv" },
-                { "Bankomat", "cash_machine.csv" },
-                { "Kościół", "church.csv" },
-                { "Przychodnia", "clinic.csv" },
-                { "Sklep odzieżowy", "clothes.csv" },
-                { "Fast food", "fast_food.csv" },
-                { "Garaż", "garage.csv" },
-                { "Siłownia", "gym.csv" },
-                { "Fryzjer", "hairdresser.csv" },
-                { "Szpital", "hospital.csv" },
-                { "Przedszkole", "kindergarten.csv" },
-                { "Kiosk", "kiosk.csv" },
-                { "Rynek", "marketplace.csv" },
-                { "Park", "park.csv" },
-                { "Parking", "parking.csv" },
-                { "Stacja benzynowa", "petrol_station.csv" },
-                { "Apteka", "pharmacy.csv" },
-                { "Plac zabaw", "playground.csv" },
-                { "Pub", "pub.csv" },
-                { "Restauracja", "restaurant.csv" },
-                { "Szkoła", "school.csv" },
-                { "Centrum handlowe", "shopping_centre.csv" },
-                { "Supermarket", "supermarket.csv" },
-                { "Basen", "swimming_pool.csv" },
+                { "Sklep monopolowy", "alcohol.shp" },
+                { "Bank", "bank.shp" },
+                { "Bar", "bar.shp" },
+                { "Przystanek autobusowy", "bus_stop.shp" },
+                { "Kawiarnia", "cafe.shp" },
+                { "Bankomat", "cash_machine.shp" },
+                { "Kościół", "church.shp" },
+                { "Przychodnia", "clinic.shp" },
+                { "Sklep odzieżowy", "clothes.shp" },
+                { "Fast food", "fast_food.shp" },
+                { "Garaż", "garage.shp" },
+                { "Siłownia", "gym.shp" },
+                { "Fryzjer", "hairdresser.shp" },
+                { "Szpital", "hospital.shp" },
+                { "Przedszkole", "kindergarten.shp" },
+                { "Kiosk", "kiosk.shp" },
+                { "Rynek", "marketplace.shp" },
+                { "Park", "park.shp" },
+                { "Parking", "parking.shp" },
+                { "Stacja benzynowa", "petrol_station.shp" },
+                { "Apteka", "pharmacy.shp" },
+                { "Plac zabaw", "playground.shp" },
+                { "Pub", "pub.shp" },
+                { "Restauracja", "restaurant.shp" },
+                { "Szkoła", "school.shp" },
+                { "Centrum handlowe", "shopping_centre.shp" },
+                { "Supermarket", "supermarket.shp" },
+                { "Basen", "swimming_pool.shp" },
             };
 
             try
@@ -132,39 +116,5 @@ namespace OsmAreaFinder.Helpers
             }
         }
 
-
-        public static List<Poi> GetPoiListFromFilters(UserRequest data)
-        {
-            var PoiListFromFilters = new List<Poi>();
-
-            foreach (var filter in data.Filters)
-            {
-                var path = Path.Combine(CSV_FILE_DIR, GetCsvFile(filter.ObjectType));
-                string line = "";
-
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    string headerLine = sr.ReadLine();
-                    while (line != null)
-                    {
-                        line = sr.ReadLine();
-                        try
-                        {
-                            var values = line.Split(';');
-                            long id = Int64.Parse(values[0]);
-                            double lat = Double.Parse(values[1], CultureInfo.InvariantCulture);
-                            double lon = Double.Parse(values[2], CultureInfo.InvariantCulture);
-                            double radius = filter.Distance;
-                            string filtername = filter.ObjectType;
-                            string minmaxtype = filter.MinMaxType;
-                            PoiListFromFilters.Add(new Poi(lon, lat, filtername, radius, id, minmaxtype));
-                        }
-                        catch (Exception e){ Console.WriteLine(e.ToString()); }
-                    }
-                }
-                
-            }
-            return PoiListFromFilters;
-        }
     }
 }

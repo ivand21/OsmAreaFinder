@@ -12,22 +12,9 @@ namespace OsmAreaFinder.Tests
         [TestMethod]
         public void CheckDist()
         {
-            GeoObject g = new GeoObject(54.49, 18.54);
-            GeoObject f = new GeoObject(54.4967745, 18.5416321);
-            var dist = GeoDataHelper.GetDistance(f, g);
+            //GeoObject g = new GeoObject(54.49, 18.54);
+            //GeoObject f = new GeoObject(54.4967745, 18.5416321);
 
-            Assert.IsNotNull(dist);
-        }
-
-        [TestMethod]
-        public void CheckPoint()
-        {
-            GeoObject g = new GeoObject(54.49, 18.54);
-            List<Filter> filters = new List<Filter>();
-            filters.Add(new Filter("alcohol", 600));
-
-            //var isValid = GeoDataHelper.ValidatePoint(g, filters);
-            //Assert.IsTrue(isValid);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace OsmAreaFinder.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            //GeoDataHelper.CreateUserInputLayer(18.5416321, 54.4967745, 1);
             return View();
         }
 
@@ -21,11 +22,9 @@ namespace OsmAreaFinder.Controllers
         public ActionResult Search(string filters)
         {
             var data = JsonConvert.DeserializeObject<UserRequest>(filters);
-            //var isValid = GeoDataHelper.ValidatePoint(data);
-
-            //data for script
-            var FiltredPoiList = GeoDataHelper.GetPoiListFromFilters(data);
-            return Json(new { Message = true });
+            var reply = GeoDataHelper.ProcessRequest(data);
+            var r = Json(reply);
+            return Json(reply);
         }
 
        

@@ -1,5 +1,6 @@
 ﻿using DotSpatial.Data;
 using DotSpatial.Positioning;
+using DotSpatial.Projections;
 using DotSpatial.Topology;
 using GeoAPI.CoordinateSystems;
 using OsmAreaFinder.Models;
@@ -49,27 +50,28 @@ namespace OsmAreaFinder.Helpers
             //return output;
         }
 
-        public static IFeatureSet ApplyBuffer(string inpath, double distance, bool isMin)
+        // metric coordinates
+        public static IFeatureSet ApplyBuffer(string filter, double distance, bool isMin)
         {
-            IFeatureSet fs = FeatureSet.Open(inpath);      
+            string filename = GetShapefile(filter);
+            IFeatureSet fs = FeatureSet.Open(CSV_FILE_DIR + '/' + filename);
             IFeatureSet bs = fs.Buffer(distance, false);
-            return bs;
-            //bs.SaveAs(@"Municipalities_Buffer.shp", true);
+            bs.SaveAs(@"C:/test/buf.shp", true);
+            return bs;  
         }
 
+        // metric coordinates
         public static IFeatureSet CreateUserInputLayer(double lon, double lat, double radius)
         {
-            FeatureSet fs = new FeatureSet(DotSpatial.Topology.FeatureType.Polygon);
+            FeatureSet infs = new FeatureSet(DotSpatial.Topology.FeatureType.Point);
+            infs.Projection = KnownCoordinateSystems.Projected.WorldSpheroid.Mercatorsphere;
             Feature center = new Feature(new Coordinate(lon, lat));
+            infs.AddFeature(center);
 
-            var xy = new double[1] { radius };
-            var z = new double[1] { 1.0 };
-            var dist = new Distance(radius, DistanceUnit.Meters);
+            var fs = infs.Buffer(radius, false);
             
-            var circle = center.Buffer(radius);
-            fs.AddFeature(circle);
+            fs.SaveAs("C:/test/usr.shp", true);
             return fs;
-            //fs.SaveAs("outfile.shp", true);
         }
 
         public static string GetShapefile(string key)

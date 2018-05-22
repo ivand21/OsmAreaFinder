@@ -22,7 +22,9 @@ namespace OsmAreaFinder.Controllers
         public ActionResult Search(string filters)
         {
             var data = JsonConvert.DeserializeObject<UserRequest>(filters);
-            var reply = GeoDataHelper.ProcessRequest(data);
+            //var reply = GeoDataHelper.ProcessRequest(data);
+            var reply = GeoDataHelper.CreateUserInputLayer(2034249, 7167569, 1000.0);
+            //var reply = GeoDataHelper.ApplyBuffer("Sklep monopolowy", 1000, false);
             var r = Json(reply);
             return Json(reply);
         }

@@ -199,34 +199,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Models\shp\alcohol.csv" />
-    <Content Include="Models\shp\bank.csv" />
-    <Content Include="Models\shp\bar.csv" />
-    <Content Include="Models\shp\bus_stop.csv" />
-    <Content Include="Models\shp\cafe.csv" />
-    <Content Include="Models\shp\cash_machine.csv" />
-    <Content Include="Models\shp\church.csv" />
-    <Content Include="Models\shp\clinic.csv" />
-    <Content Include="Models\shp\clothes.csv" />
-    <Content Include="Models\shp\fast_food.csv" />
-    <Content Include="Models\shp\garage.csv" />
-    <Content Include="Models\shp\gym.csv" />
-    <Content Include="Models\shp\hairdresser.csv" />
-    <Content Include="Models\shp\hospital.csv" />
-    <Content Include="Models\shp\kindergarten.csv" />
-    <Content Include="Models\shp\kiosk.csv" />
-    <Content Include="Models\shp\marketplace.csv" />
-    <Content Include="Models\shp\park.csv" />
-    <Content Include="Models\shp\parking.csv" />
-    <Content Include="Models\shp\petrol_station.csv" />
-    <Content Include="Models\shp\pharmacy.csv" />
-    <Content Include="Models\shp\playground.csv" />
-    <Content Include="Models\shp\pub.csv" />
-    <Content Include="Models\shp\restaurant.csv" />
-    <Content Include="Models\shp\school.csv" />
-    <Content Include="Models\shp\shopping_centre.csv" />
-    <Content Include="Models\shp\supermarket.csv" />
-    <Content Include="Models\shp\swimming_pool.csv" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -294,6 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\shp\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

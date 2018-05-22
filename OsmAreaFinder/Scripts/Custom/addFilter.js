@@ -24,10 +24,17 @@ function delFilter(row) {
 function search() {
     if (lastFeature) {
         var circle = lastFeature.getGeometry();
-        var radius = circle.getRadius();
-        var circleTransform = circle.transform('EPSG:3857', 'EPSG:4326');
-        var coords = circleTransform.getCenter();
-        $("#map-text").html("Promień obszaru: " + radius);
+        var coords = circle.getCenter()
+        var radius = circle.getRadius()
+        var edgeCoordinate = [coords[0] + radius, coords[1]];
+        var wgs84Sphere = new ol.Sphere(6378137);
+        var groundRadius = wgs84Sphere.haversineDistance(
+            ol.proj.transform(coords, 'EPSG:3857', 'EPSG:4326'),
+            ol.proj.transform(edgeCoordinate, 'EPSG:3857', 'EPSG:4326')
+        );
+
+        //var radius = circleTransform.getRadius();
+        $("#map-text").html("Promień obszaru: " + groundRadius);
         $("#map-text").append("/nPunkt środkowy: Lon:  " + coords[0] + "  Lat:  " + coords[1]);
     }
 

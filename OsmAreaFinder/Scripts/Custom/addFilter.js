@@ -24,8 +24,8 @@ function delFilter(row) {
 function search() {
     if (lastFeature) {
         var circle = lastFeature.getGeometry();
-        var coords = circle.getCenter()
-        var radius = circle.getRadius()
+        var coords = circle.getCenter();
+        var radius = circle.getRadius();
         var edgeCoordinate = [coords[0] + radius, coords[1]];
         var wgs84Sphere = new ol.Sphere(6378137);
         var groundRadius = wgs84Sphere.haversineDistance(
@@ -48,9 +48,15 @@ function search() {
         data: JSON.stringify({ 'filters': data }),
         success: function (response) {
             console.log(response);
-            if (response.Message)
+            if (response.Polygons.length > 0)
             {
-                alert('Znaleziono punkt');
+                $.each(response.Polygons, function(index, polygon) {
+                    var vertices = [];
+                    $.each(polygon.Vertices, function(ind, vertex) {
+                        vertices.push([vertex.Lon, vertex.Lat]);
+                    });
+                    drawPolygon(vertices)
+                });
             }
             else
             {

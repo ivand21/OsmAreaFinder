@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OsmAreaFinder.Models
 {
-    public class PolygonReply
+    public class PolygonModel
     {
         public List<Coord> Vertices { get; set; } = new List<Coord>();
     }

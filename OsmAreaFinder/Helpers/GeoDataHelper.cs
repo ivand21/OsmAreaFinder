@@ -1,4 +1,5 @@
-﻿using DotSpatial.Data;
+﻿using DotSpatial.Analysis;
+using DotSpatial.Data;
 using DotSpatial.Positioning;
 using DotSpatial.Projections;
 using DotSpatial.Topology;
@@ -18,36 +19,61 @@ namespace OsmAreaFinder.Helpers
         private static string CSV_FILE_DIR = Path.
             Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Models/shp");
 
-        public static List<PolygonReply> ProcessRequest(UserRequest req)
+        public static List<PolygonModel> ProcessRequest(UserRequest req)
         {
-            var polygons = new List<PolygonReply>();
+            var polygons = new List<PolygonModel>();
 
             IFeatureSet resultArea = CreateUserInputLayer(req.Lon, req.Lat, req.Radius);
+            var c = Complement(resultArea);
+
             foreach (var f in req.Filters)
             {
                 bool isMin = f.MinMaxType == "Minimum";
-                var buffered = ApplyBuffer(GetShapefile(f.ObjectType), req.Radius, isMin);
+                var buffered = ApplyBuffer(f.ObjectType, f.Distance, isMin);
                 resultArea = Intersect(resultArea, buffered);
             }
 
-            foreach (var f in resultArea.Features)
+            foreach (var s in resultArea.ShapeIndices)
             {
-                var item = new PolygonReply();
-                foreach (var coord in f.Coordinates)
+                foreach (var part in s.Parts)
                 {
-                    item.Vertices.Add(new Coord() { Lon = coord.X, Lat = coord.Y });
-                }
-                if (item.Vertices.Count > 0)
+                    var item = new PolygonModel() { Vertices = new List<Coord>() };
+
+                    for (int i = part.StartIndex * 2; i <= part.EndIndex * 2; i += 2)
+                    {
+                        Coord point = new Coord();
+                        point.Lon = part.Vertices[i];
+                        point.Lat = part.Vertices[i + 1];
+                        item.Vertices.Add(point);
+                    }
                     polygons.Add(item);
+                }
             }
             return polygons;
         }
 
         public static IFeatureSet Intersect(IFeatureSet l1, IFeatureSet l2)
         {
-            return l1.Intersection(l2, FieldJoinType.LocalOnly, null);
-            //output.SaveAs("inter.shp", true);
-            //return output;
+            var p1 = l1.Projection;
+            var p2 = l2.Projection;
+            var output = l1.Intersection(l2, FieldJoinType.LocalOnly, null);
+            //output.Projection = ProjectionInfo.FromEpsgCode(3857);
+            output.SaveAs("C:/test/inter.shp", true);
+            //return l1.Intersection(l2, FieldJoinType.LocalOnly, null);
+            return output;
+        }
+
+        public static IFeatureSet Complement(IFeatureSet l)
+        {
+            IFeatureSet fs = FeatureSet.Open(CSV_FILE_DIR + "/all.shp");
+            var world = fs.Features[0];
+            foreach (var ft in l.Features)
+            {
+                world = world.Difference(ft);
+            }
+            fs.Features[0] = world;
+            fs.SaveAs("c:/test/compl.shp", true);
+            return fs;
         }
 
         // metric coordinates
@@ -57,7 +83,7 @@ namespace OsmAreaFinder.Helpers
             IFeatureSet fs = FeatureSet.Open(CSV_FILE_DIR + '/' + filename);
             IFeatureSet bs = fs.Buffer(distance, false);
             bs.SaveAs(@"C:/test/buf.shp", true);
-            return bs;  
+            return bs;
         }
 
         // metric coordinates
@@ -69,7 +95,7 @@ namespace OsmAreaFinder.Helpers
             infs.AddFeature(center);
 
             var fs = infs.Buffer(radius, false);
-            
+
             fs.SaveAs("C:/test/usr.shp", true);
             return fs;
         }

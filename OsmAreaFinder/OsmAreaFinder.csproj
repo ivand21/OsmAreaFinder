@@ -199,12 +199,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Models\shp\alcohol.cpg" />
-    <Content Include="Models\shp\alcohol.dbf" />
-    <Content Include="Models\shp\alcohol.prj" />
-    <Content Include="Models\shp\alcohol.qpj" />
-    <Content Include="Models\shp\alcohol.shp" />
-    <Content Include="Models\shp\alcohol.shx" />
     <Content Include="Models\shp\bank.cpg" />
     <Content Include="Models\shp\bank.dbf" />
     <Content Include="Models\shp\bank.prj" />

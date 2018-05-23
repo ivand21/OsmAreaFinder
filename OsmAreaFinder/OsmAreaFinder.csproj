@@ -350,6 +350,12 @@
     <Content Include="Models\shp\swimming_pool.qpj" />
     <Content Include="Models\shp\swimming_pool.shp" />
     <Content Include="Models\shp\swimming_pool.shx" />
+    <Content Include="Models\shp\alcohol.cpg" />
+    <Content Include="Models\shp\alcohol.dbf" />
+    <Content Include="Models\shp\alcohol.prj" />
+    <Content Include="Models\shp\alcohol.qpj" />
+    <Content Include="Models\shp\alcohol.shp" />
+    <Content Include="Models\shp\alcohol.shx" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

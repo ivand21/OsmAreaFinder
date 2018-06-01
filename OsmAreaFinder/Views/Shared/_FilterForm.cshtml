@@ -5,7 +5,7 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.ObjectType)
-        @Html.DropDownListFor(m => m.ObjectType, new SelectList(OsmAreaFinder.Models.PoiList.Poi), new { @class = "form-control", @id = "in-objtype" })
+        @Html.DropDownListFor(m => m.ObjectType, new SelectList(OsmAreaFinder.Models.PoiList.Poi.Keys), new { @class = "form-control", @id = "in-objtype" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.MinMaxType)

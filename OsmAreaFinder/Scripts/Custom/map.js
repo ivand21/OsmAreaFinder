@@ -2,6 +2,7 @@
 var s_lat = 54.372158;
 var draw;
 var lastFeature;
+var resultPolygon = new ol.geom.Polygon([]);
 
 var raster = new ol.layer.Tile({
     source: new ol.source.OSM()
@@ -10,7 +11,17 @@ var raster = new ol.layer.Tile({
 var source = new ol.source.Vector({ wrapX: false });
 
 var vector = new ol.layer.Vector({
-    source: source
+    source: source,
+});
+
+var style = new ol.style.Style({
+    stroke: new ol.style.Stroke({
+        color: 'rgba(255,0,0,0.3)',
+        width: 1
+    }),
+    fill: new ol.style.Fill({
+        color: 'rgba(255,0,0,0.3)'
+    })
 });
 
 var resultSource = new ol.source.Vector();
@@ -48,25 +59,22 @@ function addInteraction() {
     });
 }
 
-function drawPolygon(values) {
-    var polygon = new ol.geom.Polygon([values]);
+function addLinearRing(values) {
+    var linearRing = new ol.geom.LinearRing([values]);
+    resultPolygon.appendLinearRing(linearRing);
+    console.log(linearRing.getCoordinates());
     //polygon.transform('EPSG:3857', 'EPSG:4326');
+    
+    //var feature = new ol.Feature(polygon);
+    //feature.setStyle(style);
+    //resultSource.addFeature(feature);
+}
 
-    var style = new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: 'rgba(255,0,0,0.3)',
-            width: 1
-        }),
-        fill: new ol.style.Fill({
-            color: 'rgba(255,0,0,0.3)'
-        })
-    });
-    
-    var feature = new ol.Feature(polygon);
+function drawPolygon() {
+    var feature = new ol.Feature(resultPolygon);
     feature.setStyle(style);
-    resultSource.addFeature(feature); 
-    
-    console.log(polygon.getFirstCoordinate());
+    resultSource.addFeature(feature);
+    console.log(resultPolygon.getCoordinates())
 }
 
 addInteraction();

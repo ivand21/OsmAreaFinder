@@ -102,6 +102,14 @@
       <HintPath>..\packages\DotSpatial.Topology.1.9\lib\net40-Client\DotSpatial.Topology.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="gdalconst_csharp, Version=1.0.5387.28601, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.1.11.1\lib\net40\gdalconst_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.5387.28601, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.1.11.1\lib\net40\gdal_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
       <HintPath>..\packages\MapSuiteDependency-GeoAPI.10.2.0\lib\net45\GeoAPI.dll</HintPath>
       <Private>True</Private>
@@ -149,6 +157,14 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.5387.28600, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.1.11.1\lib\net40\ogr_csharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.5387.28600, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.1.11.1\lib\net40\osr_csharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2573bf8a1bdddcd5, processorArchitecture=MSIL">
@@ -205,6 +221,7 @@
     <Content Include="Content\global.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\Images\icon-remove.png" />
+    <Content Include="GdalConfiguration.vb" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -387,6 +404,43 @@
     <Content Include="Models\shp\alcohol.qpj" />
     <Content Include="Models\shp\alcohol.shp" />
     <Content Include="Models\shp\alcohol.shx" />
+    <None Include="_bin_deployableAssemblies\x86\zlib1.dll" />
+    <None Include="_bin_deployableAssemblies\x86\xerces-c_2_8.dll" />
+    <None Include="_bin_deployableAssemblies\x86\ssleay32.dll" />
+    <None Include="_bin_deployableAssemblies\x86\spatialite.dll" />
+    <None Include="_bin_deployableAssemblies\x86\proj.dll" />
+    <None Include="_bin_deployableAssemblies\x86\osr_wrap.dll" />
+    <None Include="_bin_deployableAssemblies\x86\openjpeg.dll" />
+    <None Include="_bin_deployableAssemblies\x86\ogr_wrap.dll" />
+    <None Include="_bin_deployableAssemblies\x86\msvcr100.dll" />
+    <None Include="_bin_deployableAssemblies\x86\msvcp100.dll" />
+    <None Include="_bin_deployableAssemblies\x86\libpq.dll" />
+    <None Include="_bin_deployableAssemblies\x86\libmysql.dll" />
+    <None Include="_bin_deployableAssemblies\x86\libexpat.dll" />
+    <None Include="_bin_deployableAssemblies\x86\libeay32.dll" />
+    <None Include="_bin_deployableAssemblies\x86\libcurl.dll" />
+    <None Include="_bin_deployableAssemblies\x86\iconv.dll" />
+    <None Include="_bin_deployableAssemblies\x86\geos_c.dll" />
+    <None Include="_bin_deployableAssemblies\x86\freexl.dll" />
+    <None Include="_bin_deployableAssemblies\x64\zlib1.dll" />
+    <None Include="_bin_deployableAssemblies\x64\xerces-c_2_8.dll" />
+    <None Include="_bin_deployableAssemblies\x64\ssleay32.dll" />
+    <None Include="_bin_deployableAssemblies\x64\spatialite.dll" />
+    <None Include="_bin_deployableAssemblies\x64\proj.dll" />
+    <None Include="_bin_deployableAssemblies\x64\osr_wrap.dll" />
+    <None Include="_bin_deployableAssemblies\x64\openjpeg.dll" />
+    <None Include="_bin_deployableAssemblies\x64\ogr_wrap.dll" />
+    <None Include="_bin_deployableAssemblies\x64\msvcr100.dll" />
+    <None Include="_bin_deployableAssemblies\x64\msvcp100.dll" />
+    <None Include="_bin_deployableAssemblies\x64\libpq.dll" />
+    <None Include="_bin_deployableAssemblies\x64\libmysql.dll" />
+    <None Include="_bin_deployableAssemblies\x64\libexpat.dll" />
+    <None Include="_bin_deployableAssemblies\x64\libeay32.dll" />
+    <None Include="_bin_deployableAssemblies\x64\libcurl.dll" />
+    <None Include="_bin_deployableAssemblies\x64\iconv.dll" />
+    <None Include="_bin_deployableAssemblies\x64\geos_c.dll" />
+    <None Include="_bin_deployableAssemblies\x64\freexl.dll" />
+    <None Include="_bin_deployableAssemblies\share\nad.lst" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -413,29 +467,34 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="_bin_deployableAssemblies\share\esri.extra" />
+    <None Include="_bin_deployableAssemblies\share\ntf_r93.gsb" />
+    <None Include="_bin_deployableAssemblies\share\ntv1_can.dat" />
+    <None Include="_bin_deployableAssemblies\share\nzgd2kgrid0005.gsb" />
+    <None Include="_bin_deployableAssemblies\share\other.extra" />
+    <None Include="_bin_deployableAssemblies\share\proj_def.dat" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="App_Start\GdalConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\GeoDataHelper.cs" />
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\FilterList.cs" />
-    <Compile Include="Models\GeoObject.cs" />
     <Compile Include="Models\MinMaxList.cs" />
     <Compile Include="Models\Poi.cs" />
     <Compile Include="Models\PoiList.cs" />
-    <Compile Include="Models\Coord.cs" />
-    <Compile Include="Models\PolygonModel.cs" />
-    <Compile Include="Models\ServerResponse.cs" />
     <Compile Include="Models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -513,8 +572,10 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\ThinkGeo.MapSuite.10.2.9\build\net45\ThinkGeo.MapSuite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ThinkGeo.MapSuite.10.2.9\build\net45\ThinkGeo.MapSuite.targets'))" />
+    <Error Condition="!Exists('..\packages\GDAL.Native.1.11.1\build\net40\GDAL.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GDAL.Native.1.11.1\build\net40\GDAL.Native.targets'))" />
   </Target>
   <Import Project="..\packages\ThinkGeo.MapSuite.10.2.9\build\net45\ThinkGeo.MapSuite.targets" Condition="Exists('..\packages\ThinkGeo.MapSuite.10.2.9\build\net45\ThinkGeo.MapSuite.targets')" />
+  <Import Project="..\packages\GDAL.Native.1.11.1\build\net40\GDAL.Native.targets" Condition="Exists('..\packages\GDAL.Native.1.11.1\build\net40\GDAL.Native.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

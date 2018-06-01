@@ -13,6 +13,7 @@ namespace OsmAreaFinder
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            GdalConfiguration.ConfigureGdal();
         }
     }
 }

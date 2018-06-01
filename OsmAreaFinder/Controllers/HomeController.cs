@@ -23,10 +23,10 @@ namespace OsmAreaFinder.Controllers
         {
             var data = JsonConvert.DeserializeObject<UserRequest>(filters);
             var response = GeoDataHelper.ProcessRequest(data);
-            var responseWrapped = new ServerResponse(response); 
+            //var responseWrapped = new ServerResponse(response); 
             //var reply = GeoDataHelper.CreateUserInputLayer(2034249, 7167569, 1000.0);
             //var reply = GeoDataHelper.ApplyBuffer("Sklep monopolowy", 1000, false);
-            return Json(responseWrapped);
+            return Json(response);
         }
 
        

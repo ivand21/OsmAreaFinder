@@ -1,6 +1,7 @@
 ﻿$('#btn-add-filter').click(addFilter);
 
 function addFilter() {
+    resultSource.clear();
 
     var type = $('#in-objtype').val();
     var minmax = $('#in-minmaxtype').val();
@@ -47,20 +48,19 @@ function search() {
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify({ 'filters': data }),
         success: function (response) {
-            console.log(response);
-            if (response.Polygons.length > 0)
-            {
-                $.each(response.Polygons, function(index, polygon) {
-                    var vertices = [];
-                    $.each(polygon.Vertices, function(ind, vertex) {
-                        vertices.push([vertex.Lon, vertex.Lat]);
-                    });
-                    drawPolygon(vertices)
+            if (response != "") {
+                var geoJsonFormat = new ol.format.GeoJSON();
+                var features = geoJsonFormat.readFeatures(response);
+                $.each(features, function (index, feature) {
+                    console.log(style);
+                    feature.setStyle(style);
+                    resultSource.addFeature(feature);
                 });
+                alert('Znaleziono obszary');
             }
             else
             {
-                alert('Nie znaleziono punktu');
+                alert('Nie znaleziono pasującego obszaru');
             }
         },
         error: function () {

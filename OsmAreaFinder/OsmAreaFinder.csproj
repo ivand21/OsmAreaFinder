@@ -247,6 +247,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Models\shp\alcohol.cpg" />
+    <Content Include="Models\shp\alcohol.dbf" />
+    <Content Include="Models\shp\alcohol.prj" />
+    <Content Include="Models\shp\alcohol.qpj" />
+    <Content Include="Models\shp\alcohol.shp" />
+    <Content Include="Models\shp\alcohol.shx" />
     <Content Include="Models\shp\bank.cpg" />
     <Content Include="Models\shp\bank.dbf" />
     <Content Include="Models\shp\bank.prj" />
@@ -302,6 +308,11 @@
     <Content Include="Models\shp\fast_food.shp" />
     <Content Include="Models\shp\fast_food.shx" />
     <Content Include="Models\shp\garage.cpg" />
+    <Content Include="Models\shp\garage.dbf" />
+    <Content Include="Models\shp\garage.prj" />
+    <Content Include="Models\shp\garage.qpj" />
+    <Content Include="Models\shp\garage.shp" />
+    <Content Include="Models\shp\garage.shx" />
     <Content Include="Models\shp\gym.cpg" />
     <Content Include="Models\shp\gym.dbf" />
     <Content Include="Models\shp\gym.prj" />
@@ -398,12 +409,6 @@
     <Content Include="Models\shp\swimming_pool.qpj" />
     <Content Include="Models\shp\swimming_pool.shp" />
     <Content Include="Models\shp\swimming_pool.shx" />
-    <Content Include="Models\shp\alcohol.cpg" />
-    <Content Include="Models\shp\alcohol.dbf" />
-    <Content Include="Models\shp\alcohol.prj" />
-    <Content Include="Models\shp\alcohol.qpj" />
-    <Content Include="Models\shp\alcohol.shp" />
-    <Content Include="Models\shp\alcohol.shx" />
     <None Include="_bin_deployableAssemblies\x86\zlib1.dll" />
     <None Include="_bin_deployableAssemblies\x86\xerces-c_2_8.dll" />
     <None Include="_bin_deployableAssemblies\x86\ssleay32.dll" />

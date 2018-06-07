@@ -31,7 +31,7 @@ namespace OsmAreaFinder.Helpers
 
             foreach (var f in req.Filters)
             {
-                bool isMin = f.MinMaxType == "Minimum";
+                bool isMin = f.MinMaxType == "z";
                 var buffered = ApplyBuffer(f.ObjectType, f.Distance, isMin, workdir);
                 resultArea = Intersect(resultArea, buffered, workdir);
             }
@@ -101,7 +101,7 @@ namespace OsmAreaFinder.Helpers
             IFeatureSet fs = FeatureSet.Open(CSV_FILE_DIR + '/' + filename);
             IFeatureSet bs = fs.Buffer(distance, false);
 
-            if (!isMin)
+            if (isMin)
             {
                 bs = Complement(bs, workdir);
             }

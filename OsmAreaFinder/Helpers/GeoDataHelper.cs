@@ -31,7 +31,7 @@ namespace OsmAreaFinder.Helpers
 
             foreach (var f in req.Filters)
             {
-                bool isMin = f.MinMaxType == "z";
+                bool isMin = f.MinMaxType == "Minimum";
                 var buffered = ApplyBuffer(f.ObjectType, f.Distance, isMin, workdir);
                 resultArea = Intersect(resultArea, buffered, workdir);
             }

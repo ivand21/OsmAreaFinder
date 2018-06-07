@@ -1,6 +1,7 @@
 ﻿$('#btn-add-filter').click(addFilter);
 
 function addFilter() {
+
     resultSource.clear();
 
     var type = $('#in-objtype').val();
@@ -62,6 +63,8 @@ function search() {
             {
                 alert('Nie znaleziono pasującego obszaru');
             }
+
+            document.body.style.cursor = 'default';
         },
         error: function () {
             alert("Coś nie działa");

@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script src="~/Scripts/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="~/Styles/sweetalert.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -8,6 +10,9 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+
+
 
     <style>
         h1 {
@@ -42,9 +47,9 @@
             width: auto;
         }
 
-        #footer{
-          background:black;
-          color:white;
+        #footer {
+            background: black;
+            color: white;
         }
     </style>
 
@@ -60,12 +65,13 @@
             var strcount
             var x = new Date()
             var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getFullYear();
-            x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
+            x1 = x1 + " - " + x.getHours() + ":" + (x.getMinutes() < 10 ? '0' : '') + x.getMinutes() + ":" + x.getSeconds();
             document.getElementById('ct').innerHTML = x1;
 
             tt = display_c();
         }
 
+    
     </script>
 
 </head>
@@ -79,7 +85,6 @@
             <div id="ct"></div>
         </div>
     </header>
-    
 
     @RenderBody()
     <footer id="footer">

@@ -1,5 +1,16 @@
 ﻿$('#btn-add-filter').click(addFilter);
 
+// Load script
+var filerefjs = document.createElement('script');
+filerefjs.setAttribute("type", "text/javascript");
+filerefjs.setAttribute("src", "~/Scripts/sweetalert.min.js);");
+
+// Load CSS file
+var filerefcss = document.createElement("link");
+filerefcss.setAttribute("rel", "stylesheet");
+filerefcss.setAttribute("type", "text/css");
+filerefcss.setAttribute("href", "~/Styles/sweetalert.css");
+
 function addFilter() {
 
     resultSource.clear();
@@ -17,6 +28,9 @@ function addFilter() {
 
     if (filterRepeatFlag == -1 && correctDistance)
         $('#filter-table-body').append(str);
+    else {
+        swal("Niepowodzenie operacji", "Nieprawidłowa odległość lub podany filtr już istnieje", "error");
+    }
 }
 
 function delFilter(row) {
@@ -58,11 +72,11 @@ function search() {
                         feature.setStyle(style);
                         resultSource.addFeature(feature);
                     });
-                    alert('Znaleziono obszary');
+                    swal("Powodzenie operacji", "Znaleziono obszary", "success");
                   
                 }
                 else {
-                    alert('Nie znaleziono pasującego obszaru');
+                    swal("Niepowodzenie operacji", "Nie znaleziono obszarów pasujących do podanych filtrów", "error");
                 }
 
                 document.body.style.cursor = 'default';
@@ -73,7 +87,7 @@ function search() {
         });
     }
     else {
-        alert("Nie zaznaczono obszaru");
+        swal("", "Nie zaznaczono obszaru", "warning");
         document.body.style.cursor = 'default';
 
     }

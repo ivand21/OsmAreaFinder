@@ -37,8 +37,8 @@ function search() {
         );
 
         //var radius = circleTransform.getRadius();
-        $("#map-text").html("Promień obszaru: " + groundRadius);
-        $("#map-text").append("/nPunkt środkowy: Lon:  " + coords[0] + "  Lat:  " + coords[1]);
+        //$("#map-text").html("Promień obszaru: " + groundRadius);
+        //$("#map-text").append("/nPunkt środkowy: Lon:  " + coords[0] + "  Lat:  " + coords[1]);
 
 
         var data = JSON.stringify({ 'Radius': radius, 'Lon': coords[0], 'Lat': coords[1], 'Filters': getAllFilters() });
@@ -59,6 +59,7 @@ function search() {
                         resultSource.addFeature(feature);
                     });
                     alert('Znaleziono obszary');
+                  
                 }
                 else {
                     alert('Nie znaleziono pasującego obszaru');

@@ -8,19 +8,79 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
-</head>
-<body>
+
+    <style>
+        h1 {
+            color: white;
+            font-family: 'Droid serif', serif;
+            font-size: 36px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 44px;
+            margin: 0 0 12px;
+            text-align: center;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+
+        .container {
+            text-align: center;
+            color: lightgoldenrodyellow;
+            margin-bottom: 0.5em;
+        }
+
+        #ct {
+            display: inline-block;
+            width: auto;
+        }
+
+        #footer{
+          background:black;
+          color:white;
+        }
+    </style>
+
     <script type="text/javascript">
         var searchUrl = '@Url.Action("Search", "Home")';
+
+        function display_c() {
+            var refresh = 1000; // Refresh rate in milli seconds
+            mytime = setTimeout('display_ct()', refresh)
+        }
+
+        function display_ct() {
+            var strcount
+            var x = new Date()
+            var x1 = x.toUTCString();// changing the display to UTC string
+            document.getElementById('ct').innerHTML = x1;
+            tt = display_c();
+        }
+
     </script>
 
-    <header>
+</head>
+<body onload=display_ct();>
+    
 
+    <header style="background:#005A31;width:100%;">
+      <h1>OSM Area Finder</h1>
+        <hr />
+        <div class="container">
+            <div id="ct"></div>
+        </div>
     </header>
     
 
     @RenderBody()
-    <footer>
+    <footer id="footer">
         <p>&copy; 2018 - Dariusz Asztemborski, Jan Dąbrowski</p>
     </footer>
 

@@ -1,7 +1,7 @@
 ﻿var s_lon = 18.638306;
 var s_lat = 54.372158;
 var draw;
-var lastFeature;
+var lastFeature = null;
 var resultPolygon = new ol.geom.Polygon([]);
 
 var raster = new ol.layer.Tile({

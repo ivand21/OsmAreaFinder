@@ -25,6 +25,7 @@ function delFilter(row) {
 }
 function search() {
     if (lastFeature) {
+        document.body.style.cursor = 'wait';
         var circle = lastFeature.getGeometry();
         var coords = circle.getCenter();
         var radius = circle.getRadius();
@@ -38,38 +39,43 @@ function search() {
         //var radius = circleTransform.getRadius();
         $("#map-text").html("Promień obszaru: " + groundRadius);
         $("#map-text").append("/nPunkt środkowy: Lon:  " + coords[0] + "  Lat:  " + coords[1]);
+
+
+        var data = JSON.stringify({ 'Radius': radius, 'Lon': coords[0], 'Lat': coords[1], 'Filters': getAllFilters() });
+        console.log(data);
+        $.ajax({
+            type: 'POST',
+            url: searchUrl,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ 'filters': data }),
+            success: function (response) {
+                if (response != "") {
+                    var geoJsonFormat = new ol.format.GeoJSON();
+                    var features = geoJsonFormat.readFeatures(response);
+                    $.each(features, function (index, feature) {
+                        console.log(style);
+                        feature.setStyle(style);
+                        resultSource.addFeature(feature);
+                    });
+                    alert('Znaleziono obszary');
+                }
+                else {
+                    alert('Nie znaleziono pasującego obszaru');
+                }
+
+                document.body.style.cursor = 'default';
+            },
+            error: function () {
+                alert("Coś nie działa");
+            }
+        });
     }
+    else {
+        alert("Nie zaznaczono obszaru");
+        document.body.style.cursor = 'default';
 
-    var data = JSON.stringify({ 'Radius': radius, 'Lon': coords[0], 'Lat': coords[1], 'Filters': getAllFilters() });
-    console.log(data);
-    $.ajax({
-        type: 'POST',
-        url: searchUrl,
-        dataType: 'json',
-        contentType: 'application/json; charset=utf-8',
-        data: JSON.stringify({ 'filters': data }),
-        success: function (response) {
-            if (response != "") {
-                var geoJsonFormat = new ol.format.GeoJSON();
-                var features = geoJsonFormat.readFeatures(response);
-                $.each(features, function (index, feature) {
-                    console.log(style);
-                    feature.setStyle(style);
-                    resultSource.addFeature(feature);
-                });
-                alert('Znaleziono obszary');
-            }
-            else
-            {
-                alert('Nie znaleziono pasującego obszaru');
-            }
-
-            document.body.style.cursor = 'default';
-        },
-        error: function () {
-            alert("Coś nie działa");
-        }
-    });
+    }
 }
 
 function getAllFilters() {
